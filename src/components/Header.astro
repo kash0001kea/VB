@@ -3,22 +3,22 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="bg-green1 p-4 fixed lg:static w-full bgg-slate-200 z-40 top-0" >
+<div x-data="{ showmenu: false }" class="bg-green1 p-4 fixed lg:static w-full z-40 top-0" >
     <div id="navbar" class="flex flex-row justify-between max-w-[1200px] mx-auto">
         <div id="logo" class="my-auto lg:text-2xl">
             <a href="/">
-                <img src="/icons/logo.png" alt="" class="sm:max-h-[80px] md:max-h-[100px] lg:max-h-[160px]">
+                <img src="/images/footer/logo.svg" alt="" class="sm:max-h-[60px] md:max-h-[60px] lg:max-h-[60px]">
             </a>
         </div>
         <!-- Desktop Menu -->
         <nav id="desktopmenu" class="hidden lg:block content-center sticky top-0">
-            <ul class="lg:flex flex-row gap-12 ">
-                <li> <Link href="/forestillinger">Forestillinger</Link></li>
-                <li> <Link href="/about">Om os</Link></li>
-                <li> <Link href="/">Nyheder</Link></li>
-                <li> <Link href="/contact">Kontakt</Link></li>
-                <li> <Link href="/contact">Merch</Link></li>
-                <li> <Link href="/contact">Min Profil</Link></li>
+            <ul class="lg:flex flex-row gap-12 content-center items-center">
+                <li> <Link variant="navlink" href="/forestillinger">Forestillinger</Link></li>
+                <li> <Link variant="navlink" href="/about">Om os</Link></li>
+                <li> <Link variant="navlink" href="/">Nyheder</Link></li>
+                <li> <Link variant="navlink" href="/contact">Kontakt</Link></li>
+                <li> <Link variant="navlink" href="/contact">Merch</Link></li>
+                <li> <Link variant="navlink" href="/contact">Min Profil</Link></li>
                 <li><div class="px-auto"><Button>Køb Billet</Button></div> </li>
             </ul>    
         </nav>
@@ -28,9 +28,13 @@ import Button from "./Button.astro";
     <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 bg-dark-green " 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="flex flex-col text-center gap-10 py-10">
-            <li> <Link href="/about">Om os</Link></li>
-            <li> <Link href="/forestillinger">Forestillinger</Link></li>
-            <li> <Link href="/contact">Kontakt</Link></li>
+            <li> <Link variant="navlink" href="/forestillinger">Forestillinger</Link></li>
+            <li> <Link variant="navlink" href="/about">Om os</Link></li>
+            <li> <Link variant="navlink" href="/">Nyheder</Link></li>
+            <li> <Link variant="navlink" href="/contact">Kontakt</Link></li>
+            <li> <Link variant="navlink" href="/contact">Merch</Link></li>
+            <li> <Link variant="navlink" href="/contact">Min Profil</Link></li>
             <li><div class="px-auto"><Button>Køb Billet</Button></div> </li>
+        </ul>  
     </nav>
 </div>

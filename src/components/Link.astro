@@ -7,15 +7,15 @@ const linkStyling = "";
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-"textlink": "underline font-bold",
-"primary": "btn my-2 btn-primary",
+"navlink": "font-bold text-green3 hover:text-brown3 hover:underline transition duration-300 ease-in-out",
+"primary": "btn my-2 btn-primary underline border-bottom-2 border-brown1 text-brown1 font-bold hover:text-brown2 transition duration-300 ease-in-out",
 "secondary": "btn my-2 btn-secondary"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
 "regular": "",
-"small": "btn-sm"
+"small": "btn-sm text-sm"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
