@@ -7,6 +7,22 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  /* Costum Colors */
+  --color-green1: #173945;
+  --color-green2: #1D8FB1;
+  --color-green3: #D5E0DC;
+  --color-green4: #F1F6F4;
+
+  --color-brown1: #8B533C;
+  --color-brown2: #BC846D;
+  --color-brown3: #F2D2C3;
+  --color-brown4: #F8EEE4;
+  --color-brown5: #FFF7F1;
+
+  /* Costum theme fonts */
+  --font-heading: "Cardo";
+  --font-body: "Raleway";
 }
 
 @layer base {
