@@ -2,14 +2,138 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import TextHeading from '../components/TextHeading.astro';
+import TextBody from '../components/TextBody.astro';
+import Testimonials from "../components/Testimonials.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Testimonials from "../components/Testimonials.astro";
+import { i } from "motion/react-client";
 ---
-<MainLayout title="Titel">
-	<article>
+<MainLayout title="Verdens Balletten - Hjem">
+	<article class="sm:max-w-[340px] lg:max-w-[1200px] justify-center mx-auto">
+		<!-- start short about -->
+		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center">
+			<div class="lg:relative content-center">
+				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0">
+				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1">
+			</div>
+			<div class="max-w-[484px] mx-auto py-20 px-4">
+				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-6">Velkommen til VerdensBalletten</TextHeading>
+				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading text-[24px] mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
+				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
+				<div class="flex flex-row gap-20 mt-8 items-center">
+					<Button>Køb Billet Nu</Button>
+					<Link>Læs Mere →</Link>
+				</div>
+			</div>
+				
+			</div>
+		</section>
+		<!-- end short about -->
+
+		<!-- start upcoming performances -->
+		<section>
+			<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
+			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
+			<div>**Card componenets go here**</div>
+		</section>
+		<!-- end upcoming performances -->
+
+		<!-- start video section -->
+		<section class="mt-30">
+			<div class="flex flex-row justify-between align-middle mb-15">
+				<div>
+					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæder dig til</TextHeading>
+					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold">Sæson 2026</TextHeading>
+				</div>
+				<div>
+					<TextHeading htmlheading="h2" size="px20" stylingclasses="lg:max-w-[685px] text-[20px]">
+						Se med, lyt og oplev en smagsprøve af, hvad man kan opleve til Verdensballetten.
+						Lad os sammen glæde os til den kommende forestilling i de lyse sommeraftener på særligt udvalgte destinationer.
+					</TexHeading>
+				</div>
+			</div>
+			<div><video src="/images/index/Trailer-A-Verdensballetten-2026-1920x1080_Web-1.mp4" controls></video></div>
+		</section>
+		<!-- end video section -->
+
+		<section class="mt-30">
+			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold max-w-[658px]">
+				Hvor ballet, opera og klassisk musik møder naturen
+			</TextHeading>
+			<!-- start img banner -->
+   			 <div class="max-w-screen">
+
+     			 <div class="[&_img]:my-2 [&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
+
+     			   <div class="">
+     			     <div class="whitespace-nowrap">
+     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap">
+     			           <div class="flex gap-4">
+     			             <img src="/images/index/banner/img1.jpg" alt="">
+     			             <img src="/images/index/banner/img2.jpg" alt="">
+     			             <img src="/images/index/banner/img3.jpg" alt="">
+     			             <img src="/images/index/banner/img4.jpg" alt="">
+     			             <img src="/images/index/banner/img5.jpg" alt="">
+     			           </div>
+     			       </div>
+     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap" aria-hidden="true">
+     			           <div class="flex gap-4">
+     			             <img src="/images/index/banner/img1.jpg" alt="">
+     			             <img src="/images/index/banner/img2.jpg" alt="">
+     			             <img src="/images/index/banner/img3.jpg" alt="">
+     			             <img src="/images/index/banner/img4.jpg" alt="">
+     			             <img src="/images/index/banner/img5.jpg" alt="">
+     			           </div>
+     			       </div>
+     			     </div>
+				 
+     			     <div class="whitespace-nowrap">
+     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap">
+     			             <div class="flex gap-4">
+     			               <img src="/images/index/banner/img6.jpg" alt="">
+     			               <img src="/images/index/banner/img7.jpg" alt="">
+     			               <img src="/images/index/banner/img8.jpg" alt="">
+     			               <img src="/images/index/banner/img9.jpg" alt="">
+     			               <img src="/images/index/banner/img10.jpg" alt="">
+     			             </div>
+     			         </div>
+     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap" aria-hidden="true">
+     			             <div class="flex gap-4">
+     			               <img src="/images/index/banner/img6.jpg" alt="">
+     			               <img src="/images/index/banner/img7.jpg" alt="">
+     			               <img src="/images/index/banner/img8.jpg" alt="">
+     			               <img src="/images/index/banner/img9.jpg" alt="">
+     			               <img src="/images/index/banner/img10.jpg" alt="">
+     			             </div>
+     			         </div>
+     			     </div>
+     			     </div>
+     			</div>
+      		</div>
+		</section>
+
+		<!-- start reviews -->
+		<section class="mt-30">
+			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">
+				Anmeldelser
+			</TextHeading>
+			<Testimonials
+				text="Verdensballetten er både kulturmøde og kunstformidling."
+				person="- Kristeligt Dagblad"
+				>
+			</Testimonials>		
+		</section>
+		<!-- end reviews -->
+
+	</article>
+	<!-- <article>
 		<h1>VB</h1>
 		<Button>Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 		<Image src={thumbsup} alt=""></Image>
-	</article>
+	</article> -->
 </MainLayout>
+
+	

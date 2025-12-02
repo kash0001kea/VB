@@ -23,6 +23,30 @@
   /* Costum theme fonts */
   --font-heading: "Cardo";
   --font-body: "Raleway";
+
+  /*Images scroll left animation*/
+  --animate-img-scroll-left: img-scroll-left 15s linear infinite;
+
+  @keyframes img-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /*Images scroll right animation*/
+  --animate-img-scroll-right: img-scroll-right 15s linear infinite;
+
+  @keyframes img-scroll-right {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 }
 
 @layer base {
