@@ -63,9 +63,10 @@ import { i } from "motion/react-client";
 				Hvor ballet, opera og klassisk musik møder naturen
 			</TextHeading>
 			<!-- start img banner -->
-   			 <div class="max-w-screen">
+   			 <div class="overflow-x-hidden w-screen mx-auto grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
 
-     			 <div class="[&_img]:my-2 [&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
+     			 <div class="col-start-1 row-start-1 row-span-1 col-span-1 
+				 [&_img]:my-2 [&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
 
      			   <div class="">
      			     <div class="whitespace-nowrap">
@@ -116,14 +117,28 @@ import { i } from "motion/react-client";
 
 		<!-- start reviews -->
 		<section class="mt-30">
-			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">
+			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold mx-auto text-center">
 				Anmeldelser
 			</TextHeading>
-			<Testimonials
-				text="Verdensballetten er både kulturmøde og kunstformidling."
-				person="- Kristeligt Dagblad"
-				>
-			</Testimonials>		
+			<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+				<Testimonials
+					text="Verdensballetten er både kulturmøde og kunstformidling."
+					person="Kristeligt Dagblad"
+					>
+				</Testimonials>	
+	
+				<Testimonials
+					text="Verdensballetten 2025 stråler af overskud."
+					person="Balletanmelder Anne Middelboe - Information"
+					>
+				</Testimonials>	
+	
+				<Testimonials
+					text="Verdensballetten er bedre end nogensinde."
+					person="Kulturkupeen"
+					>
+				</Testimonials>	
+			</div>	
 		</section>
 		<!-- end reviews -->
 
