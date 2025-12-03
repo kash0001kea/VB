@@ -1,0 +1,15 @@
+---
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+
+const {image="", tag="", name="", location="", date="",} = Astro.props;
+---
+
+<div>
+    <div class="max-w-[330px] lg:max-w-[400px] bg-white shadow-lg rounded-lg overflow-hidden mx-auto mb-8">
+        <img src={image} alt={name} class="w-full h-[200px] lg:h-[250px] object-cover">
+        <div class="p-6">
+            <span class="text-sm text-green2 font-body font-bold uppercase">{tag}</span>
+            <h3 class="text-xl font-heading text-green1 font-bold mt-2 mb-4">{name}</h3>
+            <p class="text-green2 font-body mb-2">{location}</p>
+</div>

@@ -4,14 +4,14 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import TextHeading from '../components/TextHeading.astro';
 import TextBody from '../components/TextBody.astro';
+import Card from "../components/Card.astro";
 import Testimonials from "../components/Testimonials.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
-import Testimonials from "../components/Testimonials.astro";
 import { i } from "motion/react-client";
 ---
 <MainLayout title="Verdens Balletten - Hjem">
-	<article class="sm:max-w-[340px] lg:max-w-[1200px] justify-center mx-auto">
+	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
 		<!-- start short about -->
 		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center">
 			<div class="lg:relative content-center">
@@ -22,9 +22,9 @@ import { i } from "motion/react-client";
 				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-6">Velkommen til VerdensBalletten</TextHeading>
 				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading text-[24px] mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
 				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
-				<div class="flex flex-row gap-20 mt-8 items-center">
-					<Button>Køb Billet Nu</Button>
-					<Link>Læs Mere →</Link>
+				<div class="flex flex-row gap-20 mt-8 items-center spacing-between">
+					<Button size="regular">Køb Billet Nu</Button>
+					<Link size="regular">Læs Mere →</Link>
 				</div>
 			</div>
 				
@@ -36,13 +36,39 @@ import { i } from "motion/react-client";
 		<section>
 			<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
 			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
-			<div>**Card componenets go here**</div>
+			<div>
+				<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+					<Card
+						image="/images/index/performances/performance1.jpg"
+						tag="Ballet"
+						name="Svanesøen"
+						location="Himmelbjerget"
+						date="15. Juni 2024"
+					></Card>
+		
+					<Card
+						image="/images/index/performances/performance2.jpg"
+						tag="Opera"
+						name="Carmen"
+						location="Marselisborg Skov"
+						date="22. Juli 2024"
+					></Card>
+		
+					<Card
+						image="/images/index/performances/performance3.jpg"
+						tag="Klassisk Musik"
+						name="Beethovens Symfoni Nr.9"
+						location="Furesøen"
+						date="5. August 2024"
+					></Card>
+				</div>
+			</div>
 		</section>
 		<!-- end upcoming performances -->
 
 		<!-- start video section -->
 		<section class="mt-30">
-			<div class="flex flex-row justify-between align-middle mb-15">
+			<div class="lg:flex flex-row justify-between align-middle mb-15">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæder dig til</TextHeading>
 					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold">Sæson 2026</TextHeading>
