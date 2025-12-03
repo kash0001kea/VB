@@ -1,1 +1,95 @@
-h
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import TextHeading from '../components/TextHeading.astro';
+import TextBody from '../components/TextBody.astro';
+import Card from "../components/Card.astro";
+
+---
+
+<img src="/public/images/singleview/hero.jpg" alt="" class="hero-img">
+
+<style>
+  .hero-img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+</style>
+
+<section class="rect-section">
+    <div class="column">
+      <p>Ballet + Opera</p>
+      <h1 class="text-4xl md:text-5xl font-bold">Solyst - Den Kgl. Skydebane</h1>
+      
+    </div>
+    <div class="column">
+        <div class="flex items-center gap-2">
+            <img src="/public/images/singleview/location.svg" alt="">
+            <span class="text-lg font-medium">Klampenborg</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="/public/images/singleview/date.svg" alt="">
+            <span class="text-lg font-medium">Onsdag 8. juli 2026</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="/public/images/singleview/time.svg" alt="">
+            <span class="text-lg font-medium">kl. 19.30</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="/public/images/singleview/pause.svg" alt="">
+            <span class="text-lg font-medium">2 t. inkl. pause</span>
+          </div>
+    
+    </div>
+    <div class="column">
+      <h3>Pris, ex. gebyr:</h3>
+      <h2>445 - 765 kr.</h2>
+    </div>
+  </section>
+  
+  <style>
+    .rect-section {
+      display: flex;
+      justify-content: space-between;
+      background: #173945;
+      color: #fff;
+      padding: 2rem 3rem; /* Increased horizontal padding */
+      margin-top: -2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      max-width: 1000px; /* Increased max-width */
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .rect-section .column {
+      flex: 1;
+      margin: 0 1rem;
+    }
+    .rect-section .column h3 {
+      margin-top: 0;
+    }
+    @media (max-width: 1300px) {
+      .rect-section {
+        max-width: 95vw;
+        padding: 1rem;
+      }
+    }
+    @media (max-width: 700px) {
+      .rect-section {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      .rect-section .column {
+        margin: 1rem 0;
+      }
+    }
+  </style>
