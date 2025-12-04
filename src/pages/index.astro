@@ -34,33 +34,111 @@ import { i } from "motion/react-client";
 
 		<!-- start upcoming performances -->
 		<section>
-			<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
-			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
-			<div>
-				<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+			<div class="flex flex-row justify-between">
+				<div>
+					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
+					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
+				</div>
+				<div style="content-end"><Button variant="secondary">Se alle forestillingerne</Button></div>
+			</div>
+			<div class=" overflow-x-auto">
+				<div class="flex flex-col lg:flex-row gap-2 lg:gap-20">
 					<Card
-						image="/images/index/performances/performance1.jpg"
+						image="/images/performances/forestilling1.jpg"
 						tag="Ballet"
-						name="Svanesøen"
-						location="Himmelbjerget"
-						date="15. Juni 2024"
+						name="Det Kgl. Haveselskabs Have"
+						location="Frederiksberg"
+						date="07 Jul. 2026"
 					></Card>
 		
 					<Card
-						image="/images/index/performances/performance2.jpg"
+						image="/images/performances/forestilling2.jpg"
 						tag="Opera"
-						name="Carmen"
-						location="Marselisborg Skov"
-						date="22. Juli 2024"
+						name="Sølyst"
+						location="Klampenborg"
+						date="08 Jul. 2026"
 					></Card>
 		
 					<Card
-						image="/images/index/performances/performance3.jpg"
+						image="/images/performances/forestilling3.jpg"
 						tag="Klassisk Musik"
-						name="Beethovens Symfoni Nr.9"
-						location="Furesøen"
-						date="5. August 2024"
+						name="Sylt"
+						location="Tyskland"
+						date="09 Jul. 2026"
 					></Card>
+		
+					<Card
+						image="/images/performances/forestilling4.jpg"
+						tag="Klassisk Musik"
+						name="Møllerup Gods"
+						location="Møllerup"
+						date="10 Jul. 2026"
+					></Card>
+
+					<Card
+						image="/images/performances/forestilling5.jpg"
+						tag="Ballet + Opera"
+						name="TBA"
+						location="Skagen"
+						date="12 Jul. 2026"
+					></Card>
+
+					<Card
+						image="/images/performances/forestilling6.jpg"
+						tag="Ballet + Opera"
+						name="Den Tilsandede Kirke"
+						location="Skagen"
+						date="12 Jul. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling7.jpg"
+						tag="Ballet + Opera"
+						name="Trelleborg"
+						location="Trelleborg"
+						date="01 Aug. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling8.jpg"
+						tag="Ballet + Opera"
+						name="Fjordenhus"
+						location="Vejle"
+						date="02 Aug. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling9.jpg"
+						tag="Ballet + Opera"
+						name="Great Northern"
+						location="Kerteminde"
+						date="03 Aug. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling10.jpg"
+						tag="Ballet + Opera"
+						name="Christianssæde Slot"
+						location="Lolland"
+						date="04 Aug. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling11.jpg"
+						tag="Ballet + Opera"
+						name="Tisvildeleje"
+						location="Tisvildeleje"
+						date="05 Aug. 2026"
+					></Card>
+		
+					<Card
+						image="/images/performances/forestilling12.jpg"
+						tag="Ballet + Opera"
+						name="Rønnebæksholm"
+						location="Næstved"
+						date="06 Aug. 2026"
+					></Card>
+		
 				</div>
 			</div>
 		</section>
