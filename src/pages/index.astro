@@ -11,10 +11,22 @@ import thumbsup from "../assets/images/thumbsup.png";
 import { i } from "motion/react-client";
 ---
 <MainLayout title="Verdens Balletten - Hjem">
-	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
+		<!-- start hero video section -->
+		<!-- <div class="w-screen mb-20 overflow-hidden ">
+			<video 
+				src="/images/index/hero-video.mp4" 
+				autoplay 
+				muted 
+				loop 
+				class="w-full h-full object-cover"
+			></video>
+		</div> -->
+		<!-- end hero video section -->
+
+	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my-30">
 		<!-- start short about -->
 		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center">
-			<div class="lg:relative content-center">
+			<div class="hidden lg:inline lg:relative content-center">
 				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0">
 				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1">
 			</div>
@@ -23,7 +35,7 @@ import { i } from "motion/react-client";
 				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading text-[24px] mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
 				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
 				<div class="flex flex-row gap-20 mt-8 items-center spacing-between">
-					<Button size="regular">Køb Billet Nu</Button>
+					<Button size="regular">Køb Billet</Button>
 					<Link size="regular">Læs Mere →</Link>
 				</div>
 			</div>
@@ -33,16 +45,18 @@ import { i } from "motion/react-client";
 		<!-- end short about -->
 
 		<!-- start upcoming performances -->
-		<section>
-			<div class="flex flex-row justify-between">
+		<section class="animate__animated animate__fadeInUp">
+			<div class="flex flex-row justify-between ">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
 					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
 				</div>
-				<div style="content-end"><Button variant="secondary">Se alle forestillingerne</Button></div>
+				<div class="hidden lg:flex-1 lg:flex items-center justify-end">
+					<Button variant="secondary">Se alle forestillingerne</Button>
+				</div>
 			</div>
 			<div class=" overflow-x-auto">
-				<div class="flex flex-col lg:flex-row gap-2 lg:gap-20">
+				<div class="flex flex-row gap-12 lg:gap-20">
 					<Card
 						image="/images/performances/forestilling1.jpg"
 						tag="Ballet"
@@ -74,14 +88,14 @@ import { i } from "motion/react-client";
 						location="Møllerup"
 						date="10 Jul. 2026"
 					></Card>
-
+<!-- 
 					<Card
 						image="/images/performances/forestilling5.jpg"
 						tag="Ballet + Opera"
 						name="TBA"
 						location="Skagen"
 						date="12 Jul. 2026"
-					></Card>
+					></Card> -->
 
 					<Card
 						image="/images/performances/forestilling6.jpg"
@@ -140,6 +154,11 @@ import { i } from "motion/react-client";
 					></Card>
 		
 				</div>
+
+				<div class="lg:hidden flex-1 flex items-center justify-center mt-8">
+					<Button variant="secondary">Se alle forestillingerne</Button>
+				</div>
+
 			</div>
 		</section>
 		<!-- end upcoming performances -->
@@ -255,4 +274,22 @@ import { i } from "motion/react-client";
 	</article> -->
 </MainLayout>
 
+<script>
+		/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+
+	// js blocks goes here
 	
+	/* inView animation */
+	inView( ".fotoinview" , () =>{
+	animate( ".fotoinview", { y: [2000, 0 ] }, { duration: 1 })
+	})
+	
+	inView( ".animate__fadeInUp" , () =>{
+	animate( ".animate__fadeInUp", { y: [2000, 0 ], opacity:[0,1] }, { duration: 1.5 })
+	})
+
+
+
+
+</script>

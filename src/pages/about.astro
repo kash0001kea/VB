@@ -1,1 +1,69 @@
-<h1>ABOUT</h1>
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import TextHeading from '../components/TextHeading.astro';
+import TextBody from '../components/TextBody.astro';
+import Card from "../components/Card.astro";
+import Testimonials from "../components/Testimonials.astro";
+---
+
+<MainLayout>
+    <article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
+        <!-- Heading starts here -->
+    <section class="mt-15 lg:mt-30">
+        <div class="mx-auto mb-6 text-center">
+                <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Sæsong 2026</TextHeading> -->
+                <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Om VerdensBalletten</TextHeading>
+            </div>
+        <div class="border-b-brown3 border-2 border-b-"></div>
+    </section>
+    <!-- end heading -->
+
+    <!-- Heading starts here -->
+    <section class="mt-30">
+        <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20">
+               <div>
+                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Balletten med Danmark som kulisse</TextHeading>
+                    <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
+                        Med ønsket om at flytte ballet og klassisk musik ud af 
+                        de mørke teatersale, rykker Verdensballetten hver 
+                        sommer tutu, tåspidsdans og klassiske pas de 
+                        deux’er ud i den danske sommer.
+                    </TextHeading>
+               </div>
+               <TextBody size="p">
+                Siden den første forestilling i 2008, hvor scenen 
+                blev sat i den rå natur ved Den Tilsandede Kirke 
+                i Skagen, optræder Verdensballetten nu på 
+                mange spektakulære lokationer rundt i hele 
+                Danmark, hvor man aldrig før har oplevet ballet 
+                og opera på dette høje internationale niveau.
+                <br><br>
+                Vælg din yndlingslokation, alt efter om
+                 kulisserne skal være havets brusen, smukke 
+                 slotte, rå fængselsmure, åbne bypladser og 
+                 ikoniske vartegn, og nyd at alt er under åben 
+                 himmel. Samspillet mellem vind og vejr, kunsten 
+                 og naturen som bagtæppe skaber en helt ny balletoplevelse 
+                 præget af hver lokations særlige sjæl og karakter.
+               </TextBody>
+            </div>
+    </section>
+    <!-- end heading -->
+
+    <section>
+        <div class="lg:grid grid-cols-2 gap-12 lg:gap-20 ">
+            <video class="lg:h-[630px]"
+                src="/images/about/05_Drone Locations VERTICAL.mp4"
+                autoplay 
+				muted 
+				loop 
+            ></video>
+            <img class="lg:max-w-[738px]" 
+                src="/images/about/img1.jpg" alt="">
+        </div>
+    </section>
+
+    </article>
+</MainLayout>
