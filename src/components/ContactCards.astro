@@ -1,0 +1,19 @@
+---
+const { image = "", title = "", description1 = "", description2 = "", description3 = "" } = Astro.props;
+---
+<div>
+  <div class="w-[272px] lg:w-[342px] h-full lg:h-[700px] overflow-hidden">
+    <img src={image} alt={title} class="w-full h-[322px] lg:h-[400px] object-cover mb-2">
+
+    <div class="flex flex-col content-between">
+      <div class="mt-2">
+        <h3 class="font-cardo font-bold text-[32px] text-green1 mt-2">{title}</h3>
+
+        <p class="font-raleway font-semibold text-[20px] text-green1">{description1}</p>
+        <p class="font-raleway text-[20px] text-green1">{description2}</p>
+        <p class="font-raleway text-[20px] text-green1">{description3}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -258,19 +258,19 @@ import Card from "../components/Card.astro";
   </div>
     </div>
 
-    <!-- Section 2 -->
+    <!-- Tab 2 -->
     <div id="tab-picnic" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">PICNIC-BOX</h2>
       <p class="italic text-gray-600">Indhold til picnicbox indsættes her.</p>
     </div>
 
-    <!-- Section 3 -->
+    <!-- Tab 3 -->
     <div id="tab-bord" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">BORD- OG BÆNKESÆT</h2>
       <p class="italic text-gray-600">Indhold om borde indsættes her.</p>
     </div>
 
-    <!-- Section 4 -->
+    <!-- Tab 4 -->
     <div id="tab-tilkob" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">TILKØB</h2>
       <p class="italic text-gray-600">Indhold om tilkøb indsættes her.</p>
@@ -318,7 +318,35 @@ import Card from "../components/Card.astro";
   </script>
 </section>
 
+<section>
+   <h2>Du vil måske også kunne lide</h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <Card
+						image="/images/performances/forestilling2.jpg"
+						tag="Opera"
+						name="Sølyst"
+						location="Klampenborg"
+						date="08 Jul. 2026"
+					></Card>
 
+                    <Card
+						image="/images/performances/forestilling9.jpg"
+						tag="Ballet + Opera"
+						name="Great Northern"
+						location="Kerteminde"
+						date="03 Aug. 2026"
+					></Card>
+
+                    <Card
+                    image="/images/performances/forestilling11.jpg"
+                    tag="Ballet + Opera"
+                    name="Tisvildeleje"
+                    location="Tisvildeleje"
+                    date="05 Aug. 2026"
+                ></Card>
+   </div>
+
+</section>
 
 
 </MainLayout>
