@@ -11,7 +11,7 @@ import Testimonials from "../components/Testimonials.astro";
 <MainLayout>
     <article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
         <!-- Heading starts here -->
-    <section class="mt-15 lg:mt-30">
+    <section class="mt-30 lg:mt-30">
         <div class="mx-auto mb-6 text-center">
                 <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Sæsong 2026</TextHeading> -->
                 <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Om VerdensBalletten</TextHeading>
@@ -20,7 +20,7 @@ import Testimonials from "../components/Testimonials.astro";
     </section>
     <!-- end heading -->
 
-    <!-- Heading starts here -->
+    <!-- start text section 1 -->
     <section class="mt-30">
         <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20">
                <div>
@@ -32,7 +32,7 @@ import Testimonials from "../components/Testimonials.astro";
                         deux’er ud i den danske sommer.
                     </TextHeading>
                </div>
-               <TextBody size="p">
+               <TextBody size="p" stylingclasses="font-body">
                 Siden den første forestilling i 2008, hvor scenen 
                 blev sat i den rå natur ved Den Tilsandede Kirke 
                 i Skagen, optræder Verdensballetten nu på 
@@ -48,22 +48,210 @@ import Testimonials from "../components/Testimonials.astro";
                  og naturen som bagtæppe skaber en helt ny balletoplevelse 
                  præget af hver lokations særlige sjæl og karakter.
                </TextBody>
-            </div>
-    </section>
-    <!-- end heading -->
-
-    <section>
-        <div class="lg:grid grid-cols-2 gap-12 lg:gap-20 ">
+        </div>
+        <div class=" lg:hidden flex flex-col gap-8">
             <video class="lg:h-[630px]"
                 src="/images/about/05_Drone Locations VERTICAL.mp4"
                 autoplay 
 				muted 
 				loop 
             ></video>
-            <img class="lg:max-w-[738px]" 
+            <img class="lg:max-w-[738px] my-auto " 
+                src="/images/about/img1.jpg" alt="">
+        </div>
+        <div class="mt-15 hidden lg:flex  gap-12 lg:gap-20 parallaxelementDown">
+            <video class="lg:h-[630px]"
+                src="/images/about/05_Drone Locations VERTICAL.mp4"
+                autoplay 
+				muted 
+				loop 
+            ></video>
+            <img class="lg:max-w-[738px] my-auto parallaxelementUp" 
                 src="/images/about/img1.jpg" alt="">
         </div>
     </section>
+    <!-- end text section 1 -->
+
+    <!-- start image section 1 -->
+    <section class="">
+        
+    </section>
+    <!-- end image section 1 -->
+
+    <!-- start text section 2 -->
+    <section class="mt-60">
+        <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20">
+               <div>
+                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Helstøbt gallaforestilling</TextHeading>
+                    <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
+                        Årets forestilling byder på mindre uddrag fra ballettens mangfoldige verden.
+                    </TextHeading>
+               </div>
+               <TextBody size="p" stylingclasses="font-body">
+                Verdensballettens kunstneriske leder Steven McRae 
+                fra The Royal Ballet of London udtrykker det således:
+                <br>
+                ”Vi ønsker, at gæsterne oplever forestillingen som en æske 
+                delikate chokolader – alle med forskellig 
+                smag, der vækker en længsel efter mere”
+                <br><br>
+                Glæd dig til at opleve en forestilling, 
+                der således er en nøje sammensat galla 
+                med både klassisk ballet, moderne dans, 
+                og helt nye koreografier skabt specielt 
+                til Verdensballetten. Derudover indeholder 
+                programmet kendte arier og scener fra 
+                operaens verden og iørefaldende klassisk 
+                musik for violin og klaver.
+                <br><br>
+                Konferencier og solist Jens-Christian 
+                giver undervejs en underholdende indføring 
+                i aftenens værker og medvirkende med fakta
+                og skønne anekdoter, så man får den fulde oplevelse.
+               </TextBody>
+        </div>
+
+
+    </section>
+    <!-- end text section 2 -->
+
+    <!-- start image section 2 -->
+    <section class="mt-15 mb-30 lg:mb-80">
+        <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 -mt-15 lg:-mt-30 relative">
+            <img class="lg:max-w-[512px] my-auto -scale-x-100 parallaxelement3" 
+                src="/images/about/img2.jpg" alt="">
+            <img class="lg:max-w-[456px] absolute left-0 top-40 lg:left-120 lg:top-40 my-auto parallaxelement2" 
+                src="/images/about/img3.jpg" alt="">
+        </div>
+    </section>
+    <!-- end image section 2 -->
+
+    <!-- start section 3 -->
+    <section class="mt-15 lg:mt-30 lg:mb-80">
+        <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20 lg:justify-between">
+               <div>
+                   <div>
+                        <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Verdensstjerner tæt på dig</TextHeading>
+                        <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
+                            Internationale stjerner fra Europas 
+                            førende balletkompagnier møder 
+                            nogle af Danmarks dygtigste dansere.
+                        </TextHeading>
+                   </div>
+                   <TextBody size="p" stylingclasses="font-body">
+                    De medvirkende balletstjerner kommer rejsende 
+                    fra Europas førende balletkompagnier som 
+                    The Royal Ballet of London, Staatsballett Berlin, 
+                    English National Ballet og Hamburg Ballett. 
+                    Verdensballetten præsenterer naturligvis 
+                    også nogle af Danmarks dygtigste 
+                    solodansere fra Det Kongelige Teater.
+                    <br><br>
+    
+                    Alle er de karismatiske og anerkendte
+                    balletdansere med det højeste 
+                    internationale niveau, som inspireres 
+                    af Verdensballettens unikke koncept, 
+                    hvor dans i enestående omgivelser 
+                    bringer dem tæt på publikum i den 
+                    lyse sommeraften.
+                    <br><br>
+                    
+                    Trods udfordringerne ved at 
+                    optræde i det fri glæder 
+                    kunstnerne sig over uventede 
+                    benspænd som sol i øjnene, sand 
+                    i kostumet og kraftig sidevind – 
+                    alt sammen elementer som skaber 
+                    levende kunst, der opstår i nuet 
+                    – endnu stærkere og mere bevægende.
+                    <br><br>
+                    
+                    ”Det helt særlige ved Verdensballetten
+                     er alle de unikke venues, der har 
+                     deres egen energi. Vi kan se publikum, 
+                     og hele oplevelsen bliver meget mere 
+                     intim og speciel.”Reece Clarke, solodanser 
+                     ved The Royal Ballet, London.
+                     <br><br>
+                   </TextBody>
+               </div>
+               <video class="lg:max-h-[630px] lg:ml-auto"
+                src="/images/about/03_Backstage Ballerina VERTICAL.mp4"
+                autoplay 
+				muted 
+				loop 
+            ></video>
+        </div>
+    </section>
+    <!-- end section 3 -->
+
+    <section class="mt-15 lg:mt-30">
+        <div class="flex gap-12 lg:gap-20 justify-between">
+            <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 -mt-15 lg:-mt-30 relative">
+                <img class="lg:max-w-[512px] my-auto parallaxelement3" 
+                    src="/images/about/img4.jpg" alt="">
+                <img class="lg:max-w-[456px] absolute left-0 top-40 lg:-left-40 lg:top-60 my-auto parallaxelement2" 
+                    src="/images/about/img5.jpg" alt="">
+            </div>
+            <div class="max-w-[65ch]">
+                <div >
+                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Oplev Verdensballetten året rundt</TextHeading>
+                    <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
+                        Verdensballetten inviterer dig til et nyt format, vi kalder Balletsalon.
+                    </TextHeading>
+                </div>
+                    <TextBody size="p" stylingclasses="font-body">
+                    På Verdensballetten brænder vi for 
+                    at præsentere aktuelle og interessante 
+                    balletoplevelser hele året rundt, og 
+                    inviterer derfor til et nyt format, 
+                    vi kalder Balletsalon, hvor vi lader 
+                    vi publikum komme endnu tættere på.
+                    I Rungstedlunds smukke stuer indbød 
+                    vi i 2023 til en talk mellem Jens-Christian 
+                    Wandt og den danske ballerina Astrid Elbo,
+                     der bl.a. fortalte om sit karakterarbejde 
+                     i rollen som Karen Blixen i forestillingen 
+                     Blixen på Det Kgl. Teater samt forberedelserne 
+                     til hendes debut i Svanesøen samme sted.
+                     Et format vi gentog forår 2024 i 
+                     forbindelse med Danmarks premieren 
+                     på dokumentaren A Resilient Man om 
+                     Steven McRae og hans kamp tilbage 
+                     efter sin alvorlige skade.
+                     <br><br>
+                     Hold øje her på siden eller tilmeld dig vores nyhedsbrev.
+                    </TextBody>
+               </div>
+        </div>
+    </section>
+
+
 
     </article>
 </MainLayout>
+
+<script>
+    import { animate, inView, scroll } from 'motion';
+    
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelementUp", { y: [-20, 20] }), {
+		target: document.querySelector(".parallaxelementUp"),
+	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelementDown", { y: [20, -20] }), {
+		target: document.querySelector(".parallaxelementDown"),
+	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelement2", { y: [-40, 20] }), {
+		target: document.querySelector(".parallaxelement2"),
+	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelement3", { y: [20, -40] }), {
+		target: document.querySelector(".parallaxelement3"),
+	});
+</script>
