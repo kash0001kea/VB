@@ -8,23 +8,23 @@ import Card from "../components/Card.astro";
 import Testimonials from "../components/Testimonials.astro";
 ---
 
-<MainLayout>
+<MainLayout title="Om Verdens Balletten">
     <article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
-        <!-- Heading starts here -->
-    <section class="mt-30 lg:mt-30 ">
+    <!-- Heading starts here -->
+    <section class="mt-30 lg:mt-30"> 
         <div class="mx-auto mb-6 text-center">
                 <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Sæsong 2026</TextHeading> -->
                 <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Om VerdensBalletten</TextHeading>
             </div>
-        <div class="border-b-brown3 border-2 border-b-"></div>
+        <div class="border-brown3 border-1"></div>
     </section>
     <!-- end heading -->
 
     <!-- start text section 1 -->
-    <section class="mt-30 animate__animated animate__fadeInUp">
+    <section class="mt-15 lg:mt-30" id="images1"> 01
         <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20">
                <div>
-                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Balletten med Danmark som kulisse</TextHeading>
+                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Ballett med Danmark som kulisse</TextHeading>
                     <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
                         Med ønsket om at flytte ballet og klassisk musik ud af 
                         de mørke teatersale, rykker Verdensballetten hver 
@@ -59,7 +59,7 @@ import Testimonials from "../components/Testimonials.astro";
             <img class="lg:max-w-[738px] my-auto " 
                 src="/images/about/img1.jpg" alt="">
         </div>
-        <div class="mt-15 hidden lg:flex  gap-12 lg:gap-20 parallaxelementDown">
+        <div class="mt-15 hidden lg:flex  gap-12 lg:gap-20 parallaxelementDown" id="imgages1">
             <video class="lg:h-[630px]"
                 src="/images/about/05_Drone Locations VERTICAL.mp4"
                 autoplay 
@@ -73,13 +73,13 @@ import Testimonials from "../components/Testimonials.astro";
     <!-- end text section 1 -->
 
     <!-- start image section 1 -->
-    <section class="">
+    <section class="" >
         
     </section>
     <!-- end image section 1 -->
 
     <!-- start text section 2 -->
-    <section class="mt-60 animate__animated animate__fadeInUp">
+    <section class="mt-15 lg:mt-60" id="images2"> 02
         <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20">
                <div>
                     <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Helstøbt gallaforestilling</TextHeading>
@@ -116,7 +116,7 @@ import Testimonials from "../components/Testimonials.astro";
     <!-- end text section 2 -->
 
     <!-- start image section 2 -->
-    <section class="mt-15 mb-30 lg:mb-80">
+    <section class="mt-15 mb-30 lg:mb-80" id="images2">
         <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 -mt-15 lg:-mt-30 relative">
             <img class="lg:max-w-[512px] my-auto -scale-x-100 parallaxelement3" 
                 src="/images/about/img2.jpg" alt="">
@@ -127,7 +127,7 @@ import Testimonials from "../components/Testimonials.astro";
     <!-- end image section 2 -->
 
     <!-- start section 3 -->
-    <section class="mt-15 lg:mt-30 lg:mb-80">
+    <section class="mt-15 lg:mt-30 lg:mb-40" id="images3"> 03
         <div class="mx-auto mb-6 lg:grid grid-cols-2 gap-12 lg:gap-20 lg:justify-between">
                <div>
                    <div>
@@ -176,7 +176,7 @@ import Testimonials from "../components/Testimonials.astro";
                      <br><br>
                    </TextBody>
                </div>
-               <video class="lg:max-h-[630px] lg:ml-auto"
+               <video class="lg:max-h-[630px] lg:ml-auto " id ="video2"
                 src="/images/about/03_Backstage Ballerina VERTICAL.mp4"
                 autoplay 
 				muted 
@@ -186,16 +186,17 @@ import Testimonials from "../components/Testimonials.astro";
     </section>
     <!-- end section 3 -->
 
-    <section class="mt-15 lg:mt-30">
-        <div class="flex gap-12 lg:gap-20 justify-between">
-            <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 -mt-15 lg:-mt-30 relative">
-                <img class="lg:max-w-[512px] my-auto parallaxelement3" 
+    <!-- start section 4 -->
+    <section class="mt-15 lg:mt-30 mb-15 lg:mb-60" id="images4"> 04
+        <div class="lg:flex gap-12 lg:gap-20 justify-between" id="images3">
+            <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 relative hidden">
+                <img class="lg:max-w-[512px] my-auto parallaxelement5" 
                     src="/images/about/img4.jpg" alt="">
-                <img class="lg:max-w-[456px] absolute left-0 top-40 lg:-left-40 lg:top-60 my-auto parallaxelement2" 
+                <img class="lg:max-w-[456px] absolute left-0 top-40 lg:-left-40 lg:top-60 my-auto parallaxelement4" 
                     src="/images/about/img5.jpg" alt="">
             </div>
-            <div class="max-w-[65ch]">
-                <div >
+            <div class="max-w-[560px]">
+                <div>
                     <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Oplev Verdensballetten året rundt</TextHeading>
                     <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading mb-6 font-bold">
                         Verdensballetten inviterer dig til et nyt format, vi kalder Balletsalon.
@@ -226,19 +227,39 @@ import Testimonials from "../components/Testimonials.astro";
                </div>
         </div>
     </section>
+    <!-- end section 4 -->
 
-    <section>
+    <!-- start podcast section -->
+    <section class="my-15 lg:my-30" id="podcast"> 05
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 my-12 ">
+            <div class="">
+                <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Oplev Verdensballetten året rundt</TextHeading> -->
+                <TextHeading htmlheading="h2" size="h4" stylingclasses="font-heading lg:mb-6 font-bold">
+                    Kom Med Bag Kulisserne <br> På Verdensballetten
+                </TextHeading>
+            </div>
+                <TextBody size="p" stylingclasses="font-body max-w-[560px]">
+                I 2022 var journalist, tilrettelægger og
+                vært Katrine Nyland Sørensen med på 
+                Verdensballettens turné rundt i Danmark. 
+                Det er der kommet en podcastserie på 
+                6 afsnit ud af. I serien kan du komme
+                med helt ind i maskinrummet, høre sjove 
+                anekdoter og møde de optrædende samt 
+                teknik-holdet, der hvert år stabler 
+                forestillingen på benene.
+                </TextBody>
+            </div>
+        </div>
 
 		<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_2 et-last-child">
-		
 		<div class="et_pb_module et_pb_code et_pb_code_0  et_pb_text_align_center">
-		
-		<div class="et_pb_code_inner"><iframe src="https://widget.spreaker.com/player?episode_id=50756970&amp;theme=light&amp;playlist=show&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=false&amp;hide-comments=false&amp;hide-sharing=false&amp;hide-logo=false&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false&amp;cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Ft_website_show_cover%2Fimages.spreaker.com%2Foriginal%2F8bbed8e369ba3b6491cfe5f489c056fa.jpg&amp;color=a2805c" width="100%" height="350px" frameborder="0" class="spreaker-player" id="spreaker-player-806692"></iframe>
+		<div class="et_pb_code_inner"><iframe src="https://widget.spreaker.com/player?episode_id=50756970&amp;theme=light&amp;playlist=show&amp;playlist-continuous=false&amp;playlist-loop=false&amp;playlist-autoupdate=true&amp;chapters-image=true&amp;episode_image_position=right&amp;hide-likes=false&amp;hide-comments=false&amp;hide-sharing=false&amp;hide-logo=false&amp;hide-download=false&amp;hide-episode-description=false&amp;hide-playlist-images=false&amp;hide-playlist-descriptions=false&amp;cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Ft_website_show_cover%2Fimages.spreaker.com%2Foriginal%2F8bbed8e369ba3b6491cfe5f489c056fa.jpg&amp;color=a2805c" width="100%" height="500px" frameborder="0" class="spreaker-player" id="spreaker-player-806692"></iframe>
         <script data-minify="1" defer="" src="https://verdensballetten.dk/wp-content/cache/min/1/widgets.js?ver=1763733387" data-rocket-status="executed"></script></div>
 		</div>
 		</div>
     </section>
-
+    <!-- end podcast section -->
 
 
     </article>
@@ -248,12 +269,12 @@ import Testimonials from "../components/Testimonials.astro";
     import { animate, inView, scroll } from 'motion';
     
     /* Parallax med tekstboks */ 
-	scroll(animate(".parallaxelementUp", { y: [-20, 20] }), {
+	scroll(animate(".parallaxelementUp", { y: [-20, 40] }), {
 		target: document.querySelector(".parallaxelementUp"),
 	});
 
     /* Parallax med tekstboks */ 
-	scroll(animate(".parallaxelementDown", { y: [20, -20] }), {
+	scroll(animate(".parallaxelementDown", { y: [20, -40] }), {
 		target: document.querySelector(".parallaxelementDown"),
 	});
 
@@ -266,4 +287,43 @@ import Testimonials from "../components/Testimonials.astro";
 	scroll(animate(".parallaxelement3", { y: [20, -40] }), {
 		target: document.querySelector(".parallaxelement3"),
 	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelement4", { y: [-40, 20] }), {
+		target: document.querySelector(".parallaxelement4"),
+	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelement5", { y: [0, -60] }), {
+		target: document.querySelector(".parallaxelement5"),
+	});
+
+
+	inView( "#images1" , () =>{
+	animate("#images1", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#images2" , () =>{
+	animate("#images2", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	// inView( "#video2" , () =>{
+	// animate("#video2", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	// })
+
+    // scroll(animate("#video2", { opacity: [1,0] }), {
+	// 	target: document.querySelector("#video2"),
+	// });
+
+	inView( "#images3" , () =>{
+	animate("#images3", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#images4" , () =>{
+	animate("#images4", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#podcast" , () =>{
+	animate("#podcast", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
 </script>

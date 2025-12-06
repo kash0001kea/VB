@@ -12,7 +12,7 @@ import { i } from "motion/react-client";
 ---
 <MainLayout title="Verdens Balletten - Hjem">
 		<!-- start hero video section -->
-		<!-- <div class="w-screen mb-20 overflow-hidden ">
+		<div class="w-screen mb-20 overflow-hidden ">
 			<video 
 				src="/images/index/hero-video.mp4" 
 				autoplay 
@@ -20,50 +20,51 @@ import { i } from "motion/react-client";
 				loop 
 				class="w-full h-full object-cover"
 			></video>
-		</div> -->
+		</div>
 		<!-- end hero video section -->
 
 	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my-30">
 		<!-- start short about -->
-		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center">
+		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
 			<div class="hidden lg:inline lg:relative content-center">
 				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0">
 				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1">
 			</div>
-			<div class="max-w-[484px] mx-auto py-20 px-4">
+			<div class="max-w-[472px] py-20  ml-auto" id="verdensballetten">
 				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-6">Velkommen til VerdensBalletten</TextHeading>
 				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading text-[24px] mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
 				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
-				<div class="flex flex-row gap-20 mt-8 items-center spacing-between">
-					<Button size="regular">Køb Billet</Button>
-					<Link size="regular">Læs Mere →</Link>
+				<div class="flex flex-row gap:12 lg:gap-12 mt-8 items-center spacing-between">
+					<a href="/forestillinger"><Button size="regular">Køb Billet</Button></a>
+					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
 			</div>
 				
-			</div>
 		</section>
 		<!-- end short about -->
 
 		<!-- start upcoming performances -->
-		<section class="animate__animated animate__fadeInUp">
+		<section class="mt-30" id="forestillinger">
 			<div class="flex flex-row justify-between ">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
 					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
 				</div>
 				<div class="hidden lg:flex-1 lg:flex items-center justify-end">
-					<Button variant="secondary">Se alle forestillingerne</Button>
+					<a href="/forestillinger"><Button variant="secondary">Se alle forestillingerne</Button></a>
 				</div>
 			</div>
-			<div class=" overflow-x-auto">
+			<div class=" overflow-x-auto ">
 				<div class="flex flex-row gap-12 lg:gap-20">
-					<Card
-						image="/images/performances/forestilling1.jpg"
-						tag="Ballet"
-						name="Det Kgl. Haveselskabs Have"
-						location="Frederiksberg"
-						date="07 Jul. 2026"
-					></Card>
+					<a href="/singleview">
+						<Card
+							image="/images/performances/forestilling1.jpg"
+							tag="Ballet"
+							name="Det Kgl. Haveselskabs Have"
+							location="Frederiksberg"
+							date="07 Jul. 2026"
+						></Card>
+					</a>
 		
 					<Card
 						image="/images/performances/forestilling2.jpg"
@@ -154,20 +155,18 @@ import { i } from "motion/react-client";
 					></Card>
 		
 				</div>
-
-				<div class="lg:hidden flex-1 flex items-center justify-center mt-8">
-					<Button variant="secondary">Se alle forestillingerne</Button>
-				</div>
-
 			</div>
+			<div class="lg:hidden flex-1 flex items-center justify-center">
+					<Button variant="secondary" buttonStyling="">Se alle forestillingerne</Button>
+				</div>
 		</section>
 		<!-- end upcoming performances -->
 
 		<!-- start video section -->
-		<section class="mt-30">
+		<section class="mt-30" id="video">
 			<div class="lg:flex flex-row justify-between align-middle mb-15">
 				<div>
-					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæder dig til</TextHeading>
+					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæd dig til</TextHeading>
 					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold">Sæson 2026</TextHeading>
 				</div>
 				<div>
@@ -181,21 +180,22 @@ import { i } from "motion/react-client";
 		</section>
 		<!-- end video section -->
 
-		<section class="mt-30">
+		<!-- start image section -->
+		<section class="mt-30" id="images">
 			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold max-w-[658px]">
 				Hvor ballet, opera og klassisk musik møder naturen
 			</TextHeading>
 			<!-- start img banner -->
-   			 <div class="overflow-x-hidden w-screen mx-auto grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
+   			 <div class="fullwidthsection overflow-x-hidden w-[200vw] grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
 
      			 <div class="col-start-1 row-start-1 row-span-1 col-span-1 
 				 [&_img]:my-2 [&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
 
      			   <div class="">
      			     <div class="whitespace-nowrap">
-     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap">
+     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap p-2">
      			           <div class="flex gap-4">
-     			             <img src="/images/index/banner/img1.jpg" alt="">
+     			             <img src="/images/index/banner/img1.jpg" alt="" class="">
      			             <img src="/images/index/banner/img2.jpg" alt="">
      			             <img src="/images/index/banner/img3.jpg" alt="">
      			             <img src="/images/index/banner/img4.jpg" alt="">
@@ -236,10 +236,12 @@ import { i } from "motion/react-client";
      			     </div>
      			</div>
       		</div>
+			<!-- end img banner -->
 		</section>
+		<!-- end image section -->
 
 		<!-- start reviews -->
-		<section class="mt-30">
+		<section class="mt-30" id="review">
 			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold mx-auto text-center">
 				Anmeldelser
 			</TextHeading>
@@ -282,12 +284,36 @@ import { i } from "motion/react-client";
 	
 	/* inView animation */
 	inView( ".fotoinview" , () =>{
-	animate( ".fotoinview", { y: [2000, 0 ] }, { duration: 1 })
+	animate( ".fotoinview", { y: [200, 0 ], opacity:[0,1] }, { duration: 1 })
 	})
+
 	
-	inView( ".animate__fadeInUp" , () =>{
-	animate( ".animate__fadeInUp", { y: [2000, 0 ], opacity:[0,1] }, { duration: 1.5 })
+
+	inView( "#verdensballetten" , () =>{
+	animate( "#verdensballetten", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
 	})
+
+	inView( "#forestillinger" , () =>{
+	animate("#forestillinger", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#video" , () =>{
+	animate( "#video", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#images" , () =>{
+	animate( "#images", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	inView( "#review" , () =>{
+	animate( "#review", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
+	})
+
+	
+	
+	// inView( ".animate__fadeInUp" , () =>{
+	// animate( ".animate__fadeInUp", { y: [2000, 0 ], opacity:[0,1] }, { duration: 1.5 })
+	// })
 
 
 
