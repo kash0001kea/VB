@@ -12,7 +12,7 @@ import { i } from "motion/react-client";
 ---
 <MainLayout title="Verdens Balletten - Hjem">
 		<!-- start hero video section -->
-		<div class="w-screen mb-20 overflow-hidden ">
+		<div class="h-screen mb-20 overflow-hidden ">
 			<video 
 				src="/images/index/hero-video.mp4" 
 				autoplay 
@@ -23,7 +23,7 @@ import { i } from "motion/react-client";
 		</div>
 		<!-- end hero video section -->
 
-	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my-30">
+	<article class="mt-15 lg:mt-30 max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my30">
 		<!-- start short about -->
 		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
 			<div class="hidden lg:inline lg:relative content-center">
@@ -32,10 +32,15 @@ import { i } from "motion/react-client";
 			</div>
 			<div class="max-w-[472px] py-20  ml-auto" id="verdensballetten">
 				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-6">Velkommen til VerdensBalletten</TextHeading>
-				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading text-[24px] mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
+				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
 				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
-				<div class="flex flex-row gap:12 lg:gap-12 mt-8 items-center spacing-between">
-					<a href="/forestillinger"><Button size="regular">Køb Billet</Button></a>
+				<div class="hidden lg:flex flex-row gap:12 lg:gap-12 mt-8 items-center spacing-between">
+					<a href="/forestillinger" class="l"><Button size="regular">Køb Billetter</Button></a>
+					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
+				</div>
+				<!-- mobile version -->
+				<div class="lg:hidden flex flex-row gap:12 lg:gap-12 mt-8 items-center justify-between">
+					<a href="/forestillinger" class="l"><Button size="regular">Køb Billetter</Button></a>
 					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
 			</div>
@@ -43,20 +48,31 @@ import { i } from "motion/react-client";
 		</section>
 		<!-- end short about -->
 
-		<!-- start upcoming performances -->
-		<section class="mt-30" id="forestillinger">
+		<!-- start performances -->
+		<section class="mt-15 lg:mt-30" id="forestillinger">
 			<div class="flex flex-row justify-between ">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
 					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Forestillinger</TextHeading>
 				</div>
 				<div class="hidden lg:flex-1 lg:flex items-center justify-end">
-					<a href="/forestillinger"><Button variant="secondary">Se alle forestillingerne</Button></a>
+					<a href="/forestillinger"><Button variant="secondary">Se alle forestillingerne →</Button></a>
 				</div>
 			</div>
-			<div class=" overflow-x-auto ">
-				<div class="flex flex-row gap-12 lg:gap-20">
-					<a href="/singleview">
+			<!-- start carusel -->
+			<div class="relative">
+				<!-- prev/next controls -->
+				<button id="carousel-prev" aria-label="Forrige" class="absolute -left-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+				</button>
+				<button id="carousel-next" aria-label="Næste" class="absolute -right-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+				</button>
+
+				<!-- viewport -->
+				<div id="carousel-viewport" class="overflow-hidden">
+					<div id="carousel-track" class="flex gap-12 lg:gap-20 transition-transform will-change-transform">
+						
 						<Card
 							image="/images/performances/forestilling1.jpg"
 							tag="Ballet"
@@ -64,106 +80,179 @@ import { i } from "motion/react-client";
 							location="Frederiksberg"
 							date="07 Jul. 2026"
 						></Card>
-					</a>
-		
-					<Card
-						image="/images/performances/forestilling2.jpg"
-						tag="Opera"
-						name="Sølyst"
-						location="Klampenborg"
-						date="08 Jul. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling3.jpg"
-						tag="Klassisk Musik"
-						name="Sylt"
-						location="Tyskland"
-						date="09 Jul. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling4.jpg"
-						tag="Klassisk Musik"
-						name="Møllerup Gods"
-						location="Møllerup"
-						date="10 Jul. 2026"
-					></Card>
-<!-- 
-					<Card
-						image="/images/performances/forestilling5.jpg"
-						tag="Ballet + Opera"
-						name="TBA"
-						location="Skagen"
-						date="12 Jul. 2026"
-					></Card> -->
+			
+						<Card
+							image="/images/performances/forestilling2.jpg"
+							tag="Opera"
+							name="Sølyst"
+							location="Klampenborg"
+							date="08 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling3.jpg"
+							tag="Klassisk Musik"
+							name="Sylt"
+							location="Tyskland"
+							date="09 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling4.jpg"
+							tag="Klassisk Musik"
+							name="Møllerup Gods"
+							location="Møllerup"
+							date="10 Jul. 2026"
+						></Card>
 
-					<Card
-						image="/images/performances/forestilling6.jpg"
-						tag="Ballet + Opera"
-						name="Den Tilsandede Kirke"
-						location="Skagen"
-						date="12 Jul. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling7.jpg"
-						tag="Ballet + Opera"
-						name="Trelleborg"
-						location="Trelleborg"
-						date="01 Aug. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling8.jpg"
-						tag="Ballet + Opera"
-						name="Fjordenhus"
-						location="Vejle"
-						date="02 Aug. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling9.jpg"
-						tag="Ballet + Opera"
-						name="Great Northern"
-						location="Kerteminde"
-						date="03 Aug. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling10.jpg"
-						tag="Ballet + Opera"
-						name="Christianssæde Slot"
-						location="Lolland"
-						date="04 Aug. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling11.jpg"
-						tag="Ballet + Opera"
-						name="Tisvildeleje"
-						location="Tisvildeleje"
-						date="05 Aug. 2026"
-					></Card>
-		
-					<Card
-						image="/images/performances/forestilling12.jpg"
-						tag="Ballet + Opera"
-						name="Rønnebæksholm"
-						location="Næstved"
-						date="06 Aug. 2026"
-					></Card>
-		
+						<Card
+							image="/images/performances/forestilling6.jpg"
+							tag="Ballet + Opera"
+							name="Den Tilsandede Kirke"
+							location="Skagen"
+							date="12 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling7.jpg"
+							tag="Ballet + Opera"
+							name="Trelleborg"
+							location="Trelleborg"
+							date="01 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling8.jpg"
+							tag="Ballet + Opera"
+							name="Fjordenhus"
+							location="Vejle"
+							date="02 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling9.jpg"
+							tag="Ballet + Opera"
+							name="Great Northern"
+							location="Kerteminde"
+							date="03 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling10.jpg"
+							tag="Ballet + Opera"
+							name="Christianssæde Slot"
+							location="Lolland"
+							date="04 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling11.jpg"
+							tag="Ballet + Opera"
+							name="Tisvildeleje"
+							location="Tisvildeleje"
+							date="05 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling12.jpg"
+							tag="Ballet + Opera"
+							name="Rønnebæksholm"
+							location="Næstved"
+							date="06 Aug. 2026"
+						></Card>
+
+					</div>
 				</div>
 			</div>
-			<div class="lg:hidden flex-1 flex items-center justify-center">
-					<Button variant="secondary" buttonStyling="">Se alle forestillingerne</Button>
+
+			<script type="module">
+				// Simple carousel: scroll by card width, responsively shows multiple cards
+				const track = document.getElementById('carousel-track');
+				const viewport = document.getElementById('carousel-viewport');
+				const prevBtn = document.getElementById('carousel-prev');
+				const nextBtn = document.getElementById('carousel-next');
+
+				let index = 0;
+
+				function parsePx(value) {
+					return value ? parseFloat(value.replace('px','')) : 0;
+				}
+
+				function updateCarousel() {
+					const cards = Array.from(track.children);
+					if (!cards.length) return;
+
+					// compute gap (supports modern gap property)
+					const computed = getComputedStyle(track);
+					const gap = parsePx(computed.gap || computed.columnGap || '0px');
+
+					const firstCardRect = cards[0].getBoundingClientRect();
+					const cardWidth = firstCardRect.width;
+					const step = cardWidth + gap;
+
+					const viewportWidth = viewport.getBoundingClientRect().width;
+					const perPage = Math.max(1, Math.floor(viewportWidth / step));
+					const maxIndex = Math.max(0, cards.length - perPage);
+
+					index = Math.min(Math.max(0, index), maxIndex);
+					track.style.transform = `translateX(${-index * step}px)`;
+
+					// show/hide desktop arrows
+					prevBtn.disabled = index === 0;
+					nextBtn.disabled = index === maxIndex;
+				}
+
+				prevBtn.addEventListener('click', () => {
+					index = Math.max(0, index - 1);
+					updateCarousel();
+				});
+
+				nextBtn.addEventListener('click', () => {
+					index = index + 1;
+					updateCarousel();
+				});
+
+				window.addEventListener('resize', () => {
+					// small debounce
+					clearTimeout(window._carouselResizeTimeout);
+					window._carouselResizeTimeout = setTimeout(updateCarousel, 80);
+				});
+
+				// enable touch/drag scrolling for mobile
+				(function enableDrag() {
+					let startX = 0, scrollLeft = 0, isDown = false;
+					viewport.addEventListener('pointerdown', (e) => {
+						isDown = true;
+						startX = e.pageX;
+						scrollLeft = track.getBoundingClientRect().left;
+						viewport.setPointerCapture(e.pointerId);
+					});
+					viewport.addEventListener('pointermove', (e) => {
+						if (!isDown) return;
+						const dx = e.pageX - startX;
+						track.style.transition = 'none';
+						track.style.transform = `translateX(${dx - index * (track.children[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0))}px)`;
+					});
+					viewport.addEventListener('pointerup', (e) => {
+						isDown = false;
+						track.style.transition = '';
+						updateCarousel();
+					});
+					viewport.addEventListener('pointercancel', () => { isDown = false; track.style.transition = ''; updateCarousel(); });
+				})();
+
+				// initial
+				setTimeout(updateCarousel, 50);
+			</script>
+			<!-- end carusel -->
+			<div class="lg:hidden flex-1 flex items-center justify-center mt-12">
+					<Button variant="secondary" buttonStyling="" size="small">Se alle forestillingerne →</Button>
 				</div>
 		</section>
-		<!-- end upcoming performances -->
+		<!-- end performances -->
 
 		<!-- start video section -->
-		<section class="mt-30" id="video">
+		<section class="mt-15 lg:mt-30" id="video">
 			<div class="lg:flex flex-row justify-between align-middle mb-15">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæd dig til</TextHeading>
@@ -180,68 +269,8 @@ import { i } from "motion/react-client";
 		</section>
 		<!-- end video section -->
 
-		<!-- start image section -->
-		<section class="mt-30" id="images">
-			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold max-w-[658px]">
-				Hvor ballet, opera og klassisk musik møder naturen
-			</TextHeading>
-			<!-- start img banner -->
-   			 <div class="fullwidthsection overflow-x-hidden w-[200vw] grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
-
-     			 <div class="col-start-1 row-start-1 row-span-1 col-span-1 
-				 [&_img]:my-2 [&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
-
-     			   <div class="">
-     			     <div class="whitespace-nowrap">
-     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap p-2">
-     			           <div class="flex gap-4">
-     			             <img src="/images/index/banner/img1.jpg" alt="" class="">
-     			             <img src="/images/index/banner/img2.jpg" alt="">
-     			             <img src="/images/index/banner/img3.jpg" alt="">
-     			             <img src="/images/index/banner/img4.jpg" alt="">
-     			             <img src="/images/index/banner/img5.jpg" alt="">
-     			           </div>
-     			       </div>
-     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap" aria-hidden="true">
-     			           <div class="flex gap-4">
-     			             <img src="/images/index/banner/img1.jpg" alt="">
-     			             <img src="/images/index/banner/img2.jpg" alt="">
-     			             <img src="/images/index/banner/img3.jpg" alt="">
-     			             <img src="/images/index/banner/img4.jpg" alt="">
-     			             <img src="/images/index/banner/img5.jpg" alt="">
-     			           </div>
-     			       </div>
-     			     </div>
-				 
-     			     <div class="whitespace-nowrap">
-     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap">
-     			             <div class="flex gap-4">
-     			               <img src="/images/index/banner/img6.jpg" alt="">
-     			               <img src="/images/index/banner/img7.jpg" alt="">
-     			               <img src="/images/index/banner/img8.jpg" alt="">
-     			               <img src="/images/index/banner/img9.jpg" alt="">
-     			               <img src="/images/index/banner/img10.jpg" alt="">
-     			             </div>
-     			         </div>
-     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap" aria-hidden="true">
-     			             <div class="flex gap-4">
-     			               <img src="/images/index/banner/img6.jpg" alt="">
-     			               <img src="/images/index/banner/img7.jpg" alt="">
-     			               <img src="/images/index/banner/img8.jpg" alt="">
-     			               <img src="/images/index/banner/img9.jpg" alt="">
-     			               <img src="/images/index/banner/img10.jpg" alt="">
-     			             </div>
-     			         </div>
-     			     </div>
-     			     </div>
-     			</div>
-      		</div>
-			<!-- end img banner -->
-		</section>
-		<!-- end image section -->
-
 		<!-- start reviews -->
-		<section class="mt-30" id="review">
+		<section class="mt-15 lg:mt-30" id="review">
 			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold mx-auto text-center">
 				Anmeldelser
 			</TextHeading>
@@ -266,6 +295,79 @@ import { i } from "motion/react-client";
 			</div>	
 		</section>
 		<!-- end reviews -->
+
+		<!-- start image section -->
+		<section class="mt-15 lg:mt-30" id="images">
+			<div class="lg:flex lg:flex-row justify-between">
+				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-body mb-6 font-bold max-w-[658px]">
+					Følg os på <br>sociale medier
+				</TextHeading>
+				<div class="lg:flex lg:flex-col items- justify-top max-w-[658px]">
+						<TextHeading htmlheading="h2" size="px20" stylingclasses="font-body mb-6  ">
+							Se indhold fra bag kulisserne, interviews med kunstneren, <br>uddrag fra forestillingerne og meget mere!
+						</TextHeading>
+						<div class="flex gap-4 mb-8
+						[&_img]:bg-brown1 [&_img]:p-2 [&_img]:rounded-full [&_img]:hover:bg-brown2 transition duration-500 ease-in-out cursor-pointer">
+							<div class="px-[6px] bg-brown1 rounded-full"><img src="/images/footer/fb.svg" alt="facebook" class=""></div>
+							<img src="/images/footer/instagram.svg" alt="instagram">
+						</div>	
+				</div>
+			</div>
+			<!-- start img banner -->
+   			 <div class="fullwidthsection overflow-x-hidden w-[200vw] grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
+
+     			 <div class="col-start-1 row-start-1 row-span-1 col-span-1 
+				[&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
+
+     			   <div class="">
+     			     <div class="whitespace-nowrap">
+     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap">
+     			           <div class="flex gap-0">
+     			             <img src="/images/index/banner/img1.jpg" alt="" class="">
+     			             <img src="/images/index/banner/img2.jpg" alt="">
+     			             <img src="/images/index/banner/img3.jpg" alt="">
+     			             <img src="/images/index/banner/img4.jpg" alt="">
+     			             <img src="/images/index/banner/img5.jpg" alt="">
+     			           </div>
+     			       </div>
+     			       <div class="inline-block animate-img-scroll-left whitespace-nowrap" aria-hidden="true">
+     			           <div class="flex gap-0">
+     			             <img src="/images/index/banner/img1.jpg" alt="">
+     			             <img src="/images/index/banner/img2.jpg" alt="">
+     			             <img src="/images/index/banner/img3.jpg" alt="">
+     			             <img src="/images/index/banner/img4.jpg" alt="">
+     			             <img src="/images/index/banner/img5.jpg" alt="">
+     			           </div>
+     			       </div>
+     			     </div>
+				 
+     			     <div class="whitespace-nowrap">
+     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap">
+     			             <div class="flex gap-0">
+     			               <img src="/images/index/banner/img6.jpg" alt="">
+     			               <img src="/images/index/banner/img7.jpg" alt="">
+     			               <img src="/images/index/banner/img8.jpg" alt="">
+     			               <img src="/images/index/banner/img9.jpg" alt="">
+     			               <img src="/images/index/banner/img10.jpg" alt="">
+     			             </div>
+     			         </div>
+     			         <div class="inline-block animate-img-scroll-right whitespace-nowrap" aria-hidden="true">
+     			             <div class="flex gap-0">
+     			               <img src="/images/index/banner/img6.jpg" alt="">
+     			               <img src="/images/index/banner/img7.jpg" alt="">
+     			               <img src="/images/index/banner/img8.jpg" alt="">
+     			               <img src="/images/index/banner/img9.jpg" alt="">
+     			               <img src="/images/index/banner/img10.jpg" alt="">
+     			             </div>
+     			         </div>
+     			     </div>
+     			     </div>
+     			</div>
+      		</div>
+			<!-- end img banner -->
+		</section>
+		<!-- end image section -->
+
 
 	</article>
 	<!-- <article>

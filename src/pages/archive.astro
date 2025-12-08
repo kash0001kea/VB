@@ -1,0 +1,309 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import TextHeading from '../components/TextHeading.astro';
+import TextBody from '../components/TextBody.astro';
+import Card from "../components/Card.astro";
+import Testimonials from "../components/Testimonials.astro";
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import { i } from "motion/react-client";
+---
+<MainLayout>
+	
+	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my-30">
+
+	<!-- start carusel -->
+				<div class=" overflow-x-auto ">
+					<div class="flex flex-row gap-12 lg:gap-20">
+						<a href="/singleview">
+							<Card
+								image="/images/performances/forestilling1.jpg"
+								tag="Ballet"
+								name="Det Kgl. Haveselskabs Have"
+								location="Frederiksberg"
+								date="07 Jul. 2026"
+							></Card>
+						</a>
+			
+						<Card
+							image="/images/performances/forestilling2.jpg"
+							tag="Opera"
+							name="Sølyst"
+							location="Klampenborg"
+							date="08 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling3.jpg"
+							tag="Klassisk Musik"
+							name="Sylt"
+							location="Tyskland"
+							date="09 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling4.jpg"
+							tag="Klassisk Musik"
+							name="Møllerup Gods"
+							location="Møllerup"
+							date="10 Jul. 2026"
+						></Card>
+	<!-- 
+						<Card
+							image="/images/performances/forestilling5.jpg"
+							tag="Ballet + Opera"
+							name="TBA"
+							location="Skagen"
+							date="12 Jul. 2026"
+						></Card> -->
+	
+						<Card
+							image="/images/performances/forestilling6.jpg"
+							tag="Ballet + Opera"
+							name="Den Tilsandede Kirke"
+							location="Skagen"
+							date="12 Jul. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling7.jpg"
+							tag="Ballet + Opera"
+							name="Trelleborg"
+							location="Trelleborg"
+							date="01 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling8.jpg"
+							tag="Ballet + Opera"
+							name="Fjordenhus"
+							location="Vejle"
+							date="02 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling9.jpg"
+							tag="Ballet + Opera"
+							name="Great Northern"
+							location="Kerteminde"
+							date="03 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling10.jpg"
+							tag="Ballet + Opera"
+							name="Christianssæde Slot"
+							location="Lolland"
+							date="04 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling11.jpg"
+							tag="Ballet + Opera"
+							name="Tisvildeleje"
+							location="Tisvildeleje"
+							date="05 Aug. 2026"
+						></Card>
+			
+						<Card
+							image="/images/performances/forestilling12.jpg"
+							tag="Ballet + Opera"
+							name="Rønnebæksholm"
+							location="Næstved"
+							date="06 Aug. 2026"
+						></Card>
+			
+					</div>
+				</div>
+				<!-- end carusel -->
+	
+				<!-- carousel v1 -->
+				<div class="relative">
+					<!-- prev/next controls -->
+					<button id="carousel-prev" aria-label="Forrige" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow hidden lg:block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+					</button>
+					<button id="carousel-next" aria-label="Næste" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow hidden lg:block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+					</button>
+	
+					<!-- viewport -->
+					<div id="carousel-viewport" class="overflow-hidden">
+						<div id="carousel-track" class="flex gap-12 lg:gap-20 transition-transform will-change-transform">
+							
+							<Card
+								image="/images/performances/forestilling1.jpg"
+								tag="Ballet"
+								name="Det Kgl. Haveselskabs Have"
+								location="Frederiksberg"
+								date="07 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling2.jpg"
+								tag="Opera"
+								name="Sølyst"
+								location="Klampenborg"
+								date="08 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling3.jpg"
+								tag="Klassisk Musik"
+								name="Sylt"
+								location="Tyskland"
+								date="09 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling4.jpg"
+								tag="Klassisk Musik"
+								name="Møllerup Gods"
+								location="Møllerup"
+								date="10 Jul. 2026"
+							></Card>
+	
+							<Card
+								image="/images/performances/forestilling6.jpg"
+								tag="Ballet + Opera"
+								name="Den Tilsandede Kirke"
+								location="Skagen"
+								date="12 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling7.jpg"
+								tag="Ballet + Opera"
+								name="Trelleborg"
+								location="Trelleborg"
+								date="01 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling8.jpg"
+								tag="Ballet + Opera"
+								name="Fjordenhus"
+								location="Vejle"
+								date="02 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling9.jpg"
+								tag="Ballet + Opera"
+								name="Great Northern"
+								location="Kerteminde"
+								date="03 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling10.jpg"
+								tag="Ballet + Opera"
+								name="Christianssæde Slot"
+								location="Lolland"
+								date="04 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling11.jpg"
+								tag="Ballet + Opera"
+								name="Tisvildeleje"
+								location="Tisvildeleje"
+								date="05 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling12.jpg"
+								tag="Ballet + Opera"
+								name="Rønnebæksholm"
+								location="Næstved"
+								date="06 Aug. 2026"
+							></Card>
+	
+						</div>
+					</div>
+				</div>
+	
+				<script type="module">
+					// Simple carousel: scroll by card width, responsively shows multiple cards
+					const track = document.getElementById('carousel-track');
+					const viewport = document.getElementById('carousel-viewport');
+					const prevBtn = document.getElementById('carousel-prev');
+					const nextBtn = document.getElementById('carousel-next');
+	
+					let index = 0;
+	
+					function parsePx(value) {
+						return value ? parseFloat(value.replace('px','')) : 0;
+					}
+	
+					function updateCarousel() {
+						const cards = Array.from(track.children);
+						if (!cards.length) return;
+	
+						// compute gap (supports modern gap property)
+						const computed = getComputedStyle(track);
+						const gap = parsePx(computed.gap || computed.columnGap || '0px');
+	
+						const firstCardRect = cards[0].getBoundingClientRect();
+						const cardWidth = firstCardRect.width;
+						const step = cardWidth + gap;
+	
+						const viewportWidth = viewport.getBoundingClientRect().width;
+						const perPage = Math.max(1, Math.floor(viewportWidth / step));
+						const maxIndex = Math.max(0, cards.length - perPage);
+	
+						index = Math.min(Math.max(0, index), maxIndex);
+						track.style.transform = `translateX(${-index * step}px)`;
+	
+						// show/hide desktop arrows
+						prevBtn.disabled = index === 0;
+						nextBtn.disabled = index === maxIndex;
+					}
+	
+					prevBtn.addEventListener('click', () => {
+						index = Math.max(0, index - 1);
+						updateCarousel();
+					});
+	
+					nextBtn.addEventListener('click', () => {
+						index = index + 1;
+						updateCarousel();
+					});
+	
+					window.addEventListener('resize', () => {
+						// small debounce
+						clearTimeout(window._carouselResizeTimeout);
+						window._carouselResizeTimeout = setTimeout(updateCarousel, 80);
+					});
+	
+					// enable touch/drag scrolling for mobile
+					(function enableDrag() {
+						let startX = 0, scrollLeft = 0, isDown = false;
+						viewport.addEventListener('pointerdown', (e) => {
+							isDown = true;
+							startX = e.pageX;
+							scrollLeft = track.getBoundingClientRect().left;
+							viewport.setPointerCapture(e.pointerId);
+						});
+						viewport.addEventListener('pointermove', (e) => {
+							if (!isDown) return;
+							const dx = e.pageX - startX;
+							track.style.transition = 'none';
+							track.style.transform = `translateX(${dx - index * (track.children[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0))}px)`;
+						});
+						viewport.addEventListener('pointerup', (e) => {
+							isDown = false;
+							track.style.transition = '';
+							updateCarousel();
+						});
+						viewport.addEventListener('pointercancel', () => { isDown = false; track.style.transition = ''; updateCarousel(); });
+					})();
+	
+					// initial
+					setTimeout(updateCarousel, 50);
+				</script>
+
+	</article>
+</MainLayout>
