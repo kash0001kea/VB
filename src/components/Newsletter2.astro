@@ -1,31 +1,35 @@
 ---
+import TextHeading from "./TextHeading.astro"
+import TextBody from "./TextBody.astro"
+import Button from "./Button.astro"
+import Link from "./Link.astro"
 ---
 
-<section class="bg-[#EEF2EF] py-20">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<section class="bg-green4 py-10 lg:p-20" id="newsletter">
+    <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
   
       <!-- LEFT SIDE -->
-      <div>
-        <h1 class="text-4xl md:text-5xl font-serif text-[#0F2C2C] mb-6">
+      <div class="text-center lg:text-left">
+        <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold text-green1 mb-8">
           Tilmeld dig nyhedsbrevet
-        </h1>
+        </TextHeading>
   
-        <p class="text-xl font-semibold text-[#0F2C2C] mb-6">
+        <p class="text-xl lg:text-2xl font-semibold text-green1 mb-8">
           Vi tager dig med bagom Verdensballetten.
         </p>
   
-        <p class="text-lg leading-relaxed text-[#0F2C2C]">
+        <p class="text-lg lg:text-xl leading-relaxed text-green1">
           Vi udsender løbende – dog max én gang om måneden, men lover til gengæld fuld smæk på konkurrencer 
           om fx vores lækre merchandise og alle nyheder om program og kunstnere som det første i nyhedsbrevet.
         </p>
       </div>
   
       <!-- RIGHT SIDE -->
-      <form class="space-y-6">
+      <form class="space-y-6 max-w-[400px] lg:ml-auto">
   
         <!-- Full name -->
         <div>
-          <label class="block text-sm font-medium text-[#0F2C2C] mb-1">
+          <label class="block text-sm font-medium text-green1 mb-1">
             Fulde navn*
           </label>
           <input
@@ -52,17 +56,16 @@
           <input type="checkbox" class="h-4 w-4 mt-1 border-gray-300 rounded" />
           <label class="text-sm text-[#0F2C2C] leading-snug">
             Jeg har læst og accepterer Verdensballettens 
-            <a href="#" class="underline">privatlivspolitik</a>
+            <a href="#" class="underline text-brown2">privatlivspolitik</a>
           </label>
         </div>
   
         <!-- Submit button -->
-        <button
+        <Button
           type="submit"
-          class="bg-[#9A6444] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#7e4f34] transition"
-        >
+          class="">
           Abonner
-        </button>
+      </Button>
   
       </form>
     </div>
