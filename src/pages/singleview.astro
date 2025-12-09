@@ -95,20 +95,21 @@ import Card from "../components/Card.astro";
     }
   </style>
 
+<section class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
 <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-30">
   
     <!-- Left column: text -->
     <div class="space-y-6">
-      <div>
-        <h3 class="text-xl font-bold mb-2">Placering</h3>
-        <p class="text-base">
+      <div class="mb-25">
+        <h1 class="text-4xl md:text-5xl font-heading mb-10">Placering</h1>
+        <p class="font-body">
           Verdensballetten vender tilbage til det historiske Sølyst, Den Kongelige Skydebane nord for København — en unik aften med ballet, opera og klassisk musik i den fortryllende kulisse af parken og Øresund.
         </p>
       </div>
   
       <div>
-        <h3 class="text-xl font-bold mb-2">Synopsis</h3>
-        <p class="text-base">
+        <h1 class="text-4xl md:text-5xl font-heading mb-10">Synopsis</h1>
+        <p class="font-body">
           I sommer præsenterer Verdensballetten primaballerinaer og solodansere fra nogle af verdens førende balletkompagnier, akkompagneret af internationalt anerkendte operasangere og klassiske musikere.
           Programmet byder på højdepunkter fra Tornerose, Giselle og Manon samt nye værker skabt specielt til Verdensballetten. Tenor og konferencier Jens-Christian Wandt guider aftenen med underholdende anekdoter.
           Med naturen som kulisse får publikum en unik balletoplevelse præget af stedets særlige ånd og med tilknytning til både Gentofte og Klampenborg.
@@ -131,21 +132,19 @@ import Card from "../components/Card.astro";
                     ml-4" />
       </div>
     </section>
-  
-  <section class="kunstner mt-50 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <section>
+    <h1 class="text-4xl md:text-5xl font-heading mb-10">Kunstner</h1>
+  <section class="kunstner mt-80 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="grid grid-cols-2 gap-4 items-center">
-    
         <div>
             <img src="/public/images/singleview/steven.png" alt="" class="rounded-full w-50 h-50 object-cover">
         </div>
-    
         <div>
             <h4>Steven Mcrae</h4>
             <p>Principaldanser ved The Royal Ballet i London.</p>
         </div>
-    
     </div>
-    
+
     <div class="grid grid-cols-2 gap-4 items-center" >
         <div>
 <img src="/public/images/singleview/anna.png" alt="" class="rounded-full w-50 h-50 object-cover">
@@ -165,7 +164,8 @@ import Card from "../components/Card.astro";
         </div>
     </div>
   </section>
-
+</section>
+</section>
 
 <section class="mw-1128">
   <!-- Tabs -->
@@ -315,9 +315,9 @@ import Card from "../components/Card.astro";
   </script>
 </section>
 
-<section>
+<section >
    <h2>Du vil måske også kunne lide</h2>
-   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+   <div class=" grid grid-cols-1 lg:grid-cols-3 mb-12 gap-20 lg:gap-20">
     <Card
 						image="/images/performances/forestilling2.jpg"
 						tag="Opera"
