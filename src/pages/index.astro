@@ -23,23 +23,23 @@ import { i } from "motion/react-client";
 		</div>
 		<!-- end hero video section -->
 
-	<article class="mt-15 lg:mt-30 max-w-[360px] lg:max-w-[1200px] justify-center mx-auto lg:[&_section]:my30">
+	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto ">
 		<!-- start short about -->
-		<section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
+		<section class="mt-20 lg:mt-30 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
 			<div class="hidden lg:inline lg:relative content-center">
 				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0">
 				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1">
 			</div>
-			<div class="max-w-[472px] py-20  ml-auto" id="verdensballetten">
-				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-6">Velkommen til VerdensBalletten</TextHeading>
-				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
-				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
+			<div class="max-w-[472px] lg:py-20  ml-auto" id="verdensballetten">
+				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-4 lg:mb-6">Velkommen til VerdensBalletten</TextHeading>
+				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-4 lg:mb-6 font-bold">Ballet, opera og klassisk musik under åben himmel.</TextHeading>
+				<TextHeading htmlheading="h3" size="" stylingclasses="font-heading text-[24px] mb-4 lg:mb-6">Oplev internationale stjerner optræde i Danmarks smukkeste omgivelser i en uforglemmelig fusion af dans og natur.</TextHeading>
 				<div class="hidden lg:flex flex-row gap:12 lg:gap-12 mt-8 items-center spacing-between">
 					<a href="/forestillinger" class="l"><Button size="regular">Køb Billetter</Button></a>
 					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
 				<!-- mobile version -->
-				<div class="lg:hidden flex flex-row gap:12 lg:gap-12 mt-8 items-center justify-between">
+				<div class="lg:hidden flex flex-row gap:12 lg:gap-12 mt-4 items-center justify-between">
 					<a href="/forestillinger" class="l"><Button size="regular">Køb Billetter</Button></a>
 					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
@@ -49,7 +49,7 @@ import { i } from "motion/react-client";
 		<!-- end short about -->
 
 		<!-- start performances -->
-		<section class="mt-15 lg:mt-30" id="forestillinger">
+		<section class="mt-20 lg:mt-30" id="forestillinger">
 			<div class="flex flex-row justify-between ">
 				<div>
 					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Udforsk vores</TextHeading>
@@ -252,11 +252,11 @@ import { i } from "motion/react-client";
 		<!-- end performances -->
 
 		<!-- start video section -->
-		<section class="mt-15 lg:mt-30" id="video">
+		<section class="mt-20 lg:mt-30" id="video">
 			<div class="lg:flex flex-row justify-between align-middle mb-15">
 				<div>
-					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Glæd dig til</TextHeading>
-					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold">Sæson 2026</TextHeading>
+					<TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-">Glæd dig til</TextHeading>
+					<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading font-bold mb-2">Sæson 2026</TextHeading>
 				</div>
 				<div>
 					<TextHeading htmlheading="h2" size="px20" stylingclasses="lg:max-w-[685px] text-[20px]">
@@ -270,7 +270,7 @@ import { i } from "motion/react-client";
 		<!-- end video section -->
 
 		<!-- start reviews -->
-		<section class="mt-15 lg:mt-30" id="review">
+		<section class="mt-20 lg:mt-30" id="review">
 			<TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold mx-auto text-center">
 				Anmeldelser
 			</TextHeading>
@@ -297,7 +297,7 @@ import { i } from "motion/react-client";
 		<!-- end reviews -->
 
 		<!-- start image section -->
-		<section class="mt-15 lg:mt-30" id="images">
+		<section class="mt-20 lg:mt-30" id="images">
 			<div class="lg:flex lg:flex-row justify-between">
 				<TextHeading htmlheading="h2" size="h2" stylingclasses="font-body mb-6 font-bold max-w-[658px]">
 					Følg os på <br>sociale medier
@@ -389,7 +389,15 @@ import { i } from "motion/react-client";
 	animate( ".fotoinview", { y: [200, 0 ], opacity:[0,1] }, { duration: 1 })
 	})
 
-	
+	/* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelementUp", { y: [-20, 40] }), {
+		target: document.querySelector(".parallaxelementUp"),
+	});
+
+    /* Parallax med tekstboks */ 
+	scroll(animate(".parallaxelementDown", { y: [20, -40] }), {
+		target: document.querySelector(".parallaxelementDown"),
+	});
 
 	inView( "#verdensballetten" , () =>{
 	animate( "#verdensballetten", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
