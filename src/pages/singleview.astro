@@ -28,30 +28,30 @@ import Card from "../components/Card.astro";
 <section class="rect-section">
     <div class="column">
       <p>Ballet + Opera</p>
-      <h1 class="text-4xl md:text-5xl font-bold">Solyst - Den Kgl. Skydebane</h1>
+      <h1 class="text-4xl md:text-5xl font-heading font-bold">Solyst - Den Kgl. Skydebane</h1>
       
     </div>
     <div class="column">
         <div class="flex items-center gap-2">
             <img src="/public/images/singleview/location.svg" alt="">
-            <span class="text-lg font-medium">Klampenborg</span>
+            <span class="font-body">Klampenborg</span>
           </div>
           <div class="flex items-center gap-2">
             <img src="/public/images/singleview/date.svg" alt="">
-            <span class="text-lg font-medium">Onsdag 8. juli 2026</span>
+            <span class="font-body">Onsdag 8. juli 2026</span>
           </div>
           <div class="flex items-center gap-2">
             <img src="/public/images/singleview/time.svg" alt="">
-            <span class="text-lg font-medium">kl. 19.30</span>
+            <span class="font-body">kl. 19.30</span>
           </div>
           <div class="flex items-center gap-2">
             <img src="/public/images/singleview/pause.svg" alt="">
-            <span class="text-lg font-medium">2 t. inkl. pause</span>
+            <span class="font-body">2 t. inkl. pause</span>
           </div>
     
     </div>
     <div class="column">
-      <h3>Pris, ex. gebyr:</h3>
+      <h3 class="font-body">Pris, ex. gebyr:</h3>
       <h2>445 - 765 kr.</h2>
     </div>
   </section>
@@ -169,21 +169,21 @@ import Card from "../components/Card.astro";
 
 <section class="mw-1128">
   <!-- Tabs -->
-  <div class="max-w-4xl mx-auto mb-8">
-    <div class="flex border-b border-gray-300">
-      <button class="tab-btn px-4 py-2 font-semibold flex items-center" data-tab="menu">
+  <div class="lg:max-w-[1200px] mx-auto mb-0">
+    <div class="flex">
+      <button class="tab-btn px-4 py-2 font-semibold flex items-center bg-[#e6f0ec] font-body" data-tab="menu">
         <img src="/public/images/singleview/fork.svg" alt="" class="w-10 h-10 mr-2">
         2-Rettersmenu Balletmenu
       </button>
-      <button class="tab-btn px-4 py-2 font-semibold flex items-center" data-tab="picnic">
+      <button class="tab-btn px-4 py-2 font-semibold flex items-center font-body" data-tab="picnic">
         <img src="/public/images/singleview/picnic.svg" alt="" class="w-10 h-10 mr-2">
         Picnic-box
       </button>
-      <button class="tab-btn px-4 py-2 font-semibold flex items-center" data-tab="bord">
+      <button class="tab-btn px-4 py-2 font-semibold flex items-center font-body" data-tab="bord">
         <img src="/public/images/singleview/bank.svg" alt="" class="w-10 h-10 mr-2">
         Bord- og Bænksæt
       </button>
-      <button class="tab-btn px-4 py-2 font-semibold flex items-center" data-tab="tilkob">
+      <button class="tab-btn px-4 py-2 font-semibold flex items-center font-body" data-tab="tilkob">
         <img src="/public/images/singleview/tilkob.svg" alt="" class="w-10 h-10 mr-2">
         Tilkøb
       </button>
@@ -191,14 +191,14 @@ import Card from "../components/Card.astro";
   </div>
   
 
-  <div class="max-w-5xl mx-auto bg-[#e6f0ec] p-10 rounded-xl">
+  <div class="lg:max-w-[1200px] mx-auto bg-[#e6f0ec] p-10 rounded-xl">
 
     <!-- Section 1 -->
     <div id="tab-menu" class="tab-section">
         <div class= "p-6 rounded-xl flex flex-col md:flex-row gap-6">
 
             <!-- Column 1 -->
-            <div class="flex-1 min-w-[250px]">
+            <div class="flex-1 min-w-[250px] font-body">
               <h2 class="text-xl font-semibold mb-4">Registrering & ankomst</h2>
               <ul class="list-disc list-inside space-y-2">
                 <li>Gæster skal først registrere sig ved Verdensballettens billetbod på forpladsen.</li>
@@ -208,7 +208,7 @@ import Card from "../components/Card.astro";
             </div>
           
             <!-- Column 2 -->
-            <div class="flex-1 min-w-[250px]">
+            <div class="flex-1 min-w-[250px] font-body">
               <h2 class="text-xl font-semibold mb-4">Balletmenu 2026</h2>
               <p class="font-semibold mb-2">Serveres kl. 17.30</p>
           
@@ -235,7 +235,7 @@ import Card from "../components/Card.astro";
             </div>
           
             <!-- Column 3 -->
-            <div class="flex-1 min-w-[250px]">
+            <div class="flex-1 min-w-[250px] font-body">
               <h2 class="text-xl font-semibold mb-4">Vigtige oplysninger</h2>
               <p class="mb-2">Balletmenuen inkluderer IKKE:</p>
               <ul class="list-disc list-inside space-y-1 mb-4">
@@ -261,19 +261,16 @@ import Card from "../components/Card.astro";
     <!-- Tab 2 -->
     <div id="tab-picnic" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">PICNIC-BOX</h2>
-      <p class="italic text-gray-600">Indhold til picnicbox indsættes her.</p>
     </div>
 
     <!-- Tab 3 -->
     <div id="tab-bord" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">BORD- OG BÆNKESÆT</h2>
-      <p class="italic text-gray-600">Indhold om borde indsættes her.</p>
     </div>
 
     <!-- Tab 4 -->
     <div id="tab-tilkob" class="tab-section hidden">
       <h2 class="text-xl font-bold mb-4">TILKØB</h2>
-      <p class="italic text-gray-600">Indhold om tilkøb indsættes her.</p>
     </div>
 
     <!-- Section 3 (anchor for replacement ends here) --> 
@@ -311,8 +308,8 @@ import Card from "../components/Card.astro";
         sections.forEach(sec => sec.classList.add('hidden'));
         document.querySelector(`#tab-${target}`).classList.remove('hidden');
 
-        buttons.forEach(b => b.classList.remove('border-b-2', 'border-[#2f3e3a]'));
-        btn.classList.add('border-b-2', 'border-[#2f3e3a]','bg-[#e6f0ec]');
+        buttons.forEach(b => b.classList.remove('bg-[#e6f0ec]'));
+        btn.classList.add('bg-[#e6f0ec]');
       });
     });
   </script>
