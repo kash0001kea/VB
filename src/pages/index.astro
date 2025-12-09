@@ -23,12 +23,14 @@ import { i } from "motion/react-client";
 		</div>
 		<!-- end hero video section -->
 
+	
+
 	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto ">
 		<!-- start short about -->
 		<section class="mt-20 lg:mt-30 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
 			<div class="hidden lg:inline lg:relative content-center">
-				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0">
-				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1">
+				<img src="/images/index/1.png" alt="Himmelbjerg" class="lg:absolute lg:top-20 lg:right-0 z-0 parallaxelementDown">
+				<img src="/images/index/2.png" alt="" class="lg:absolute lg:left-0 lg:bottom-20 z-1 parallaxelementUp">
 			</div>
 			<div class="max-w-[472px] lg:py-20  ml-auto" id="verdensballetten">
 				<TextHeading htmlheading="h1" size="eyebrow" stylingclasses=" mb-4 lg:mb-6">Velkommen til VerdensBalletten</TextHeading>
@@ -44,7 +46,13 @@ import { i } from "motion/react-client";
 					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
 			</div>
-				
+		<div class="relative fullwidthsection w-[100vw]"> 
+			<img src="/images/about/blush.svg" alt="blush decoration" 
+			class="absolute -right-150 lg:-top-200 -z-10 w-[200px] lg:w-[800px]">
+			
+			<img src="/images/about/blush.svg" alt="blush decoration" 
+			class="absolute -top-200 left-100 -z-10  w-[200px] lg:w-[400px]">
+		</div>		
 		</section>
 		<!-- end short about -->
 
@@ -314,7 +322,7 @@ import { i } from "motion/react-client";
 				</div>
 			</div>
 			<!-- start img banner -->
-   			 <div class="fullwidthsection overflow-x-hidden w-[200vw] grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
+   			 <div class="fullwidthsection overflow-x-hidden w-[100vw] grid grid-rows-1 grid-cols-1 justify-center items-center whitespace-nowrap">
 
      			 <div class="col-start-1 row-start-1 row-span-1 col-span-1 
 				[&_img]:max-h-[150px] lg:[&_img]:max-h-[300px]">
