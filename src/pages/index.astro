@@ -23,8 +23,6 @@ import { i } from "motion/react-client";
 		</div>
 		<!-- end hero video section -->
 
-	
-
 	<article class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto ">
 		<!-- start short about -->
 		<section class="mt-20 lg:mt-30 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 content-center place-content-between" id="verdensballetten">
@@ -46,15 +44,24 @@ import { i } from "motion/react-client";
 					<a href="/about"><Link size="regular" href="/about">Læs Mere →</Link></a>
 				</div>
 			</div>
-		<div class="relative fullwidthsection w-[100vw]"> 
+
+		<!-- start blush decorations -->
+		<div class="relative lg:w-[1200px]"> 
 			<img src="/images/about/blush.svg" alt="blush decoration" 
-			class="absolute -right-150 lg:-top-200 -z-10 w-[200px] lg:w-[800px]">
+			class="absolute left-250 lg:-top-150 -z-10 w-[200px] lg:w-[800px]" id="blush1">
 			
 			<img src="/images/about/blush.svg" alt="blush decoration" 
-			class="absolute -top-200 left-100 -z-10  w-[200px] lg:w-[400px]">
-		</div>		
+			class="absolute right-250 -top-200  -z-10  w-[200px] lg:w-[400px]" id="blush2">
+		</div>	
+		<!-- end blush decorations -->
+		 	
 		</section>
 		<!-- end short about -->
+
+		<!-- start divider -->
+		<div class="w-full border-brown3 border-1 mt-12">
+		</div>	
+		<!-- end divider -->
 
 		<!-- start performances -->
 		<section class="mt-20 lg:mt-30" id="forestillinger">
@@ -78,7 +85,7 @@ import { i } from "motion/react-client";
 				</button>
 
 				<!-- viewport -->
-				<div id="carousel-viewport" class="overflow-hidden">
+				<div id="carousel-viewport" class="overflow-hidden w-screen lg:w-full">
 					<div id="carousel-track" class="flex gap-12 lg:gap-20 transition-transform will-change-transform">
 						
 						<Card
@@ -258,6 +265,11 @@ import { i } from "motion/react-client";
 				</div>
 		</section>
 		<!-- end performances -->
+		
+		<!-- start divider -->
+		<div class="w-full border-brown3 border-1 mt-12">
+		</div>	
+		<!-- end divider -->
 
 		<!-- start video section -->
 		<section class="mt-20 lg:mt-30" id="video">
@@ -274,8 +286,24 @@ import { i } from "motion/react-client";
 				</div>
 			</div>
 			<div><video src="/images/index/Trailer-A-Verdensballetten-2026-1920x1080_Web-1.mp4" controls></video></div>
+
+			<!-- start blush decorations -->
+			<div class="relative lg:w-[1200px] -scale-x-100 -z-10"> 
+				<img src="/images/about/blush.svg" alt="blush decoration" 
+				class="absolute left-250 lg:-top-80 w-[200px] lg:w-[500px]" id="blush3">
+
+				<img src="/images/about/blush.svg" alt="blush decoration" 
+				class="absolute right-250 -top-200 w-[200px] lg:w-[400px]" id="blush4">
+			</div>	
+			<!-- end blush decorations -->
+		 	
 		</section>
 		<!-- end video section -->
+
+		<!-- start divider -->
+		<div class="w-full border-brown3 border-1 mt-12 lg:mt-30">
+		</div>	
+		<!-- end divider -->
 
 		<!-- start reviews -->
 		<section class="mt-20 lg:mt-30" id="review">
@@ -303,6 +331,11 @@ import { i } from "motion/react-client";
 			</div>	
 		</section>
 		<!-- end reviews -->
+
+		<!-- start divider -->
+		<div class="w-full border-brown3 border-1 mt-12 lg:mt-">
+		</div>	
+		<!-- end divider -->
 
 		<!-- start image section -->
 		<section class="mt-20 lg:mt-30" id="images">
@@ -407,6 +440,29 @@ import { i } from "motion/react-client";
 		target: document.querySelector(".parallaxelementDown"),
 	});
 
+
+	//* ------------------- Blush Animations ------------------------- *//
+	/* Blush parallax up*/ 
+	scroll(animate("#blush1", { y: [-80, 80] }), {
+		target: document.querySelector("#blush1"),
+	});
+
+    /* Blush parallax down */ 
+	scroll(animate("#blush2", { y: [60, -80] }), {
+		target: document.querySelector("#blush2"),
+	});
+
+	/* Blush parallax up*/ 
+	scroll(animate("#blush3", { y: [-80, 80] }), {
+		target: document.querySelector("#blush3"),
+	});
+
+    /* Blush parallax down */ 
+	scroll(animate("#blush4", { y: [60, -80] }), {
+		target: document.querySelector("#blush4"),
+	});
+
+	//* ------------------- Fade in Animations ------------------------- *//
 	inView( "#verdensballetten" , () =>{
 	animate( "#verdensballetten", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
 	})
