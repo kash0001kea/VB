@@ -80,26 +80,17 @@ import Newsbutton from "../components/Newsbutton.astro";
 				</div>
 			</div>
 			<!-- start carusel -->
-			<div class="relative">
-				<!-- prev/next controls -->
-				<button id="carousel-prev" aria-label="Forrige" class="absolute -left-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-				</button>
-				<button id="carousel-next" aria-label="Næste" class="absolute -right-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-				</button>
-
-				<!-- viewport -->
-				<div id="carousel-viewport" class="overflow-hidden w-screen lg:w-full">
-					<div id="carousel-track" class="flex gap-12 lg:gap-20 transition-transform will-change-transform">
-						
-						<Card
-							image="/images/performances/forestilling1.jpg"
-							tag="Ballet"
-							name="Det Kgl. Haveselskabs Have"
-							location="Frederiksberg"
-							date="07 Jul. 2026"
-						></Card>
+				<div class=" overflow-x-auto ">
+					<div class="flex flex-row gap-12 lg:gap-20">
+						<a href="/singleview">
+							<Card
+								image="/images/performances/forestilling1.jpg"
+								tag="Ballet"
+								name="Det Kgl. Haveselskabs Have"
+								location="Frederiksberg"
+								date="07 Jul. 2026"
+							></Card>
+						</a>
 			
 						<Card
 							image="/images/performances/forestilling2.jpg"
@@ -124,7 +115,15 @@ import Newsbutton from "../components/Newsbutton.astro";
 							location="Møllerup"
 							date="10 Jul. 2026"
 						></Card>
-
+	<!-- 
+						<Card
+							image="/images/performances/forestilling5.jpg"
+							tag="Ballet + Opera"
+							name="TBA"
+							location="Skagen"
+							date="12 Jul. 2026"
+						></Card> -->
+	
 						<Card
 							image="/images/performances/forestilling6.jpg"
 							tag="Ballet + Opera"
@@ -180,94 +179,15 @@ import Newsbutton from "../components/Newsbutton.astro";
 							location="Næstved"
 							date="06 Aug. 2026"
 						></Card>
-
+			
 					</div>
 				</div>
-			</div>
-
-			<script type="module">
-				// Simple carousel: scroll by card width, responsively shows multiple cards
-				const track = document.getElementById('carousel-track');
-				const viewport = document.getElementById('carousel-viewport');
-				const prevBtn = document.getElementById('carousel-prev');
-				const nextBtn = document.getElementById('carousel-next');
-
-				let index = 0;
-
-				function parsePx(value) {
-					return value ? parseFloat(value.replace('px','')) : 0;
-				}
-
-				function updateCarousel() {
-					const cards = Array.from(track.children);
-					if (!cards.length) return;
-
-					// compute gap (supports modern gap property)
-					const computed = getComputedStyle(track);
-					const gap = parsePx(computed.gap || computed.columnGap || '0px');
-
-					const firstCardRect = cards[0].getBoundingClientRect();
-					const cardWidth = firstCardRect.width;
-					const step = cardWidth + gap;
-
-					const viewportWidth = viewport.getBoundingClientRect().width;
-					const perPage = Math.max(1, Math.floor(viewportWidth / step));
-					const maxIndex = Math.max(0, cards.length - perPage);
-
-					index = Math.min(Math.max(0, index), maxIndex);
-					track.style.transform = `translateX(${-index * step}px)`;
-
-					// show/hide desktop arrows
-					prevBtn.disabled = index === 0;
-					nextBtn.disabled = index === maxIndex;
-				}
-
-				prevBtn.addEventListener('click', () => {
-					index = Math.max(0, index - 1);
-					updateCarousel();
-				});
-
-				nextBtn.addEventListener('click', () => {
-					index = index + 1;
-					updateCarousel();
-				});
-
-				window.addEventListener('resize', () => {
-					// small debounce
-					clearTimeout(window._carouselResizeTimeout);
-					window._carouselResizeTimeout = setTimeout(updateCarousel, 80);
-				});
-
-				// enable touch/drag scrolling for mobile
-				(function enableDrag() {
-					let startX = 0, scrollLeft = 0, isDown = false;
-					viewport.addEventListener('pointerdown', (e) => {
-						isDown = true;
-						startX = e.pageX;
-						scrollLeft = track.getBoundingClientRect().left;
-						viewport.setPointerCapture(e.pointerId);
-					});
-					viewport.addEventListener('pointermove', (e) => {
-						if (!isDown) return;
-						const dx = e.pageX - startX;
-						track.style.transition = 'none';
-						track.style.transform = `translateX(${dx - index * (track.children[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0))}px)`;
-					});
-					viewport.addEventListener('pointerup', (e) => {
-						isDown = false;
-						track.style.transition = '';
-						updateCarousel();
-					});
-					viewport.addEventListener('pointercancel', () => { isDown = false; track.style.transition = ''; updateCarousel(); });
-				})();
-
-				// initial
-				setTimeout(updateCarousel, 50);
-			</script>
 			<!-- end carusel -->
 			<div class="lg:hidden flex-1 flex items-center justify-center mt-12">
 					<Button variant="secondary" buttonStyling="" size="small">Se alle forestillingerne →</Button>
 				</div>
+
+				
 		</section>
 		<!-- end performances -->
 		
