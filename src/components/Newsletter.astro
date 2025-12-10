@@ -1,145 +1,108 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import TextHeading from '../components/TextHeading.astro';
-import TextBody from '../components/TextBody.astro';
-import Card from "../components/Card.astro";
-import Testimonials from "../components/Testimonials.astro";
 ---
 
-<!-- a form that is max width 1200px on large screen then 340px on small screen, the input 
- fields are "fornavn" "efternavn" and "email" then a submit button. the top-->
+<!-- Modal Newsletter -->
+<div id="newsletter-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" style="display: flex;">
+    <!-- Modal Container -->
+    <div class="bg-white max-w-[720px] w-full rounded-lg overflow-hidden relative" id="modal-content">
+        <!-- Close Button -->
+        <button id="modal-close-btn" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
 
-    <div class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
-        <!-- Heading starts here -->
-        <div class="mt-30">
-            <div class="mx-auto mb-6 text-center">
-                    <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Tilmeld dig vores nyhedsbrev</TextHeading>
-                    <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Hold dig opdateret</TextHeading>
-            </div>
-            <div class="border-brown3 border-1 "></div>
-        </div>
-        <!-- end heading -->
-
-        <!-- start newsletter form -->
-        <section class="mt-30 mb-60">
-            <form class="flex flex-col gap-6 max-w-[600px] mx-auto">
-                <input type="text" name="fornavn" placeholder="Fornavn" class="p-4 border border-gray-300 rounded-md"/>
-                <input type="text" name="efternavn" placeholder="Efternavn" class="p-4 border border-gray-300 rounded-md"/>
-                <input type="email" name="email" placeholder="Email" class="p-4 border"/>
-            </form>
-        <!-- a submit button -->
-                <div class="flex justify-center mt-6">
-                    <Button type="submit">Tilmeld</Button>
-                </div>
-        </div>
-
-        <!-- -------------------------------------------------------------------------- -->
-
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            <!-- LEFT SIDE -->
+            <div class="bg-white p-8 lg:p-12 flex flex-col justify-center">
+                <h2 class="text-[32px] lg:text-[44px] font-heading font-bold text-[#0F2C2C] mb-6 leading-tight">
+                    Tilmeld dig nyhedsbrevet
+                </h2>
         
-
-<div class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
-    <div class="bg-white w-full max-w-2xl rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <!-- Header section -->
-        <div class="p-8 pb-6">
-            <h1 class="text-3xl font-bold text-gray-900 mb-6">Tilmeld dig nyhedsbrevet</h1>
-            
-            <div class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-900 mb-4">Vi tager dig med bagom Verdensballetten.</h2>
-                <p class="text-gray-700 leading-relaxed">
-                    Vi udsender løbende – dog max én gang om måneden, men lover til gengæld fuld smæk på konkurrencer om fx vores  
-                    lækre merchandise og alle nyheder om program og kunstere som det første i nyhedsbrevet.
+                <p class="text-base lg:text-lg font-semibold text-[#0F2C2C] mb-6">
+                    Vi tager dig med bagom Verdensballetten.
+                </p>
+        
+                <p class="text-sm lg:text-base leading-relaxed text-[#0F2C2C]">
+                    Vi udsender løbende – dog max én gang om måneden, men lover til gengæld fuld smæk på konkurrencer 
+                    om fx vores lækre merchandise og alle nyheder om program og kunstnere som det første i nyhedsbrevet.
                 </p>
             </div>
+        
+            <!-- RIGHT SIDE -->
+            <div class="bg-white p-8 lg:p-12 flex flex-col justify-center">
+                <form class="space-y-6">
             
-            <!-- Divider -->
-            <div class="border-t border-gray-300 my-6"></div>
-            
-            <!-- Form section -->
-            <form id="newsletter-form">
-                <div class="space-y-6">
-                    <!-- Full name field -->
+                    <!-- Full name -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-900 mb-2">
+                        <label class="block text-sm font-medium text-[#0F2C2C] mb-2">
                             Fulde navn*
                         </label>
-                        <input 
-                            type="text" 
-                            value="Sofie Jakobsen"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                            placeholder="Indtast dit fulde navn"
+                        <input
+                            type="text"
+                            placeholder="Sofie Jakobsen"
+                            class="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0F2C2C]"
                         />
                     </div>
-                    
-                    <!-- Email field -->
+            
+                    <!-- Email -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-900 mb-2">
+                        <label class="block text-sm font-medium text-[#0F2C2C] mb-2">
                             E-mail*
                         </label>
-                        <input 
-                            type="email" 
-                            value="sofie.jakobsen@gmail.com"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                            placeholder="Indtast din e-mail"
+                        <input
+                            type="email"
+                            placeholder="sofie.jakobsen@gmail.com"
+                            class="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0F2C2C]"
                         />
                     </div>
-                    
-                    <!-- Privacy policy checkbox -->
-                    <div class="flex items-start">
-                        <div class="flex items-center h-5 mt-0.5">
-                            <input 
-                                id="privacy-policy" 
-                                type="checkbox" 
-                                class="form-checkbox h-5 w-5 text-gray-900 border-2 border-gray-400 rounded focus:ring-gray-500"
-                                checked
-                            />
-                        </div>
-                        <label for="privacy-policy" class="ml-3 text-gray-700 text-sm">
-                            Jeg har læst og accepterer <a href="#" class="font-medium underline-link text-gray-900">Verdensballetten</a>s privatlivspolitik
+            
+                    <!-- Checkbox -->
+                    <div class="flex items-start space-x-3">
+                        <input type="checkbox" class="h-4 w-4 mt-1 border-gray-300 rounded" />
+                        <label class="text-sm text-[#0F2C2C] leading-snug">
+                            Jeg har læst og accepterer Verdensballettens 
+                            <a href="https://verdensballetten.dk/persondatapolitik/" class="underline text-[#8B6F47]">privatlivspolitik</a>
                         </label>
                     </div>
-                </div>
-                
-                <!-- Submit button -->
-                <div class="mt-8 pt-2">
-                    <button type="submit" class="btn-submit w-full py-4 px-4 text-white font-medium rounded-md text-lg">
+            
+                    <!-- Submit button -->
+                    <Button type="submit" class="w-full">
                         Abonner
-                    </button>
-                </div>
-                
-                <!-- Additional info -->
-                <div class="mt-6 text-center">
-                    <p class="text-xs text-gray-500">
-                        Ved at tilmelde dig accepterer du, at vi må sende dig nyhedsbreve og oplysninger om Verdensballetten. 
-                        Du kan til enhver tid afmelde dig igen.
-                    </p>
-                </div>
-            </form>
-        </div>
-        
-        <!-- Footer section -->
-        <div class="bg-gray-50 px-8 py-6 border-t border-gray-200">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="font-bold text-gray-900 text-lg">Verdensballetten</h3>
-                    <p class="text-gray-600 text-sm">København • Århus • Odense</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-gray-900">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
+                    </Button>
+            
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    const modal = document.getElementById('newsletter-modal');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const newsletterBtn = document.getElementById('newsletter-btn');
+
+    if (newsletterBtn) {
+        newsletterBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
