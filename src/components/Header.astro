@@ -3,7 +3,15 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="bg-green1 p-4 fixed lg:static w-full z-10 top-0" >
+<div x-data="{ showOnScroll: false, lastScroll: 0 }" 
+     x-init="window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        showOnScroll = currentScroll > 50; // change 50 to any threshold you want
+        lastScroll = currentScroll;
+     })"
+     :class="showOnScroll ? 'translate-y-0' : '-translate-y-full'"
+     class="bg-green1 p-4 fixed w-full z-10 top-0 transition-transform duration-300">
+
     <div id="navbar" class="flex flex-row justify-between max-w-[1200px] mx-auto">
         <div id="logo" class="my-auto lg:text-2xl">
             <a href="/">
@@ -15,26 +23,11 @@ import Button from "./Button.astro";
             <ul class="lg:flex flex-row gap-12 content-center items-center">
                 <li> <Link variant="navlink" href="/forestillinger">Forestillinger</Link></li>
                 <li> <Link variant="navlink" href="/about">Om os</Link></li>
-                <!-- <li> <Link variant="navlink" href="/">Nyheder</Link></li> -->
                 <li> <Link variant="navlink" href="/contact">Kontakt</Link></li>
-                <!-- <li> <Link variant="navlink" href="/contact">Merch</Link></li> -->
-                <!-- <li> <Link variant="navlink" href="/contact">Min Profil</Link></li> -->
                 <li><div class="px-auto"><Button>Køb Billet</Button></div> </li>
             </ul>    
         </nav>
-        <button id="burgermenu" class="lg:hidden text-2xl font-bold text-white uppercase" x-on:click="showmenu = ! showmenu">Menu</button>
+        <button id="burgermenu" class="lg:hidden text-2xl font-bold text-white uppercase" x-on:click="showmenu = !showmenu">Menu</button>
     </div>
-    <!-- Bobile menu -->
-    <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 bg-dark-green" 
-    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="flex flex-col text-center gap-10 py-10">
-            <li> <Link variant="navlink" href="/forestillinger">Forestillinger</Link></li>
-            <li> <Link variant="navlink" href="/about">Om os</Link></li>
-            <li> <Link variant="navlink" href="/">Nyheder</Link></li>
-            <li> <Link variant="navlink" href="/contact">Kontakt</Link></li>
-            <li> <Link variant="navlink" href="/contact">Merch</Link></li>
-            <li> <Link variant="navlink" href="/contact">Min Profil</Link></li>
-            <li><div class="px-auto"><Button>Køb Billet</Button></div> </li>
-        </ul>  
-    </nav>
 </div>
+
