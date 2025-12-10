@@ -80,106 +80,118 @@ import Newsbutton from "../components/Newsbutton.astro";
 				</div>
 			</div>
 			<!-- start carusel -->
-				<div class=" overflow-x-auto ">
-					<div class="flex flex-row gap-12 lg:gap-20">
-						<a href="/singleview">
+				<div class="relative">
+				
+					<!-- prev/next controls -->
+					<button id="carousel-prev" aria-label="Forrige" class="absolute -left-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+					</button>
+					<button id="carousel-next" aria-label="Næste" class="absolute -right-20 top-1/2 -translate-y-1/2 z-10 bg-transparent border-2 border-brown1 hover:bg-brown1 transition duration-300 ease-in-out p-2 rounded-full hidden lg:block">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+					</button>
+				
+
+					<div class=" overflow-x-auto ">
+						<div class="flex flex-row gap-12 lg:gap-20">
+							<a href="/singleview">
+								<Card
+									image="/images/performances/forestilling1.jpg"
+									tag="Ballet"
+									name="Det Kgl. Haveselskabs Have"
+									location="Frederiksberg"
+									date="07 Jul. 2026"
+								></Card>
+							</a>
+				
 							<Card
-								image="/images/performances/forestilling1.jpg"
-								tag="Ballet"
-								name="Det Kgl. Haveselskabs Have"
-								location="Frederiksberg"
-								date="07 Jul. 2026"
+								image="/images/performances/forestilling2.jpg"
+								tag="Opera"
+								name="Sølyst"
+								location="Klampenborg"
+								date="08 Jul. 2026"
 							></Card>
-						</a>
-			
-						<Card
-							image="/images/performances/forestilling2.jpg"
-							tag="Opera"
-							name="Sølyst"
-							location="Klampenborg"
-							date="08 Jul. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling3.jpg"
-							tag="Klassisk Musik"
-							name="Sylt"
-							location="Tyskland"
-							date="09 Jul. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling4.jpg"
-							tag="Klassisk Musik"
-							name="Møllerup Gods"
-							location="Møllerup"
-							date="10 Jul. 2026"
-						></Card>
-	<!-- 
-						<Card
-							image="/images/performances/forestilling5.jpg"
-							tag="Ballet + Opera"
-							name="TBA"
-							location="Skagen"
-							date="12 Jul. 2026"
-						></Card> -->
-	
-						<Card
-							image="/images/performances/forestilling6.jpg"
-							tag="Ballet + Opera"
-							name="Den Tilsandede Kirke"
-							location="Skagen"
-							date="12 Jul. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling7.jpg"
-							tag="Ballet + Opera"
-							name="Trelleborg"
-							location="Trelleborg"
-							date="01 Aug. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling8.jpg"
-							tag="Ballet + Opera"
-							name="Fjordenhus"
-							location="Vejle"
-							date="02 Aug. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling9.jpg"
-							tag="Ballet + Opera"
-							name="Great Northern"
-							location="Kerteminde"
-							date="03 Aug. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling10.jpg"
-							tag="Ballet + Opera"
-							name="Christianssæde Slot"
-							location="Lolland"
-							date="04 Aug. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling11.jpg"
-							tag="Ballet + Opera"
-							name="Tisvildeleje"
-							location="Tisvildeleje"
-							date="05 Aug. 2026"
-						></Card>
-			
-						<Card
-							image="/images/performances/forestilling12.jpg"
-							tag="Ballet + Opera"
-							name="Rønnebæksholm"
-							location="Næstved"
-							date="06 Aug. 2026"
-						></Card>
-			
+				
+							<Card
+								image="/images/performances/forestilling3.jpg"
+								tag="Klassisk Musik"
+								name="Sylt"
+								location="Tyskland"
+								date="09 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling4.jpg"
+								tag="Klassisk Musik"
+								name="Møllerup Gods"
+								location="Møllerup"
+								date="10 Jul. 2026"
+							></Card>
+		<!-- 
+							<Card
+								image="/images/performances/forestilling5.jpg"
+								tag="Ballet + Opera"
+								name="TBA"
+								location="Skagen"
+								date="12 Jul. 2026"
+							></Card> -->
+		
+							<Card
+								image="/images/performances/forestilling6.jpg"
+								tag="Ballet + Opera"
+								name="Den Tilsandede Kirke"
+								location="Skagen"
+								date="12 Jul. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling7.jpg"
+								tag="Ballet + Opera"
+								name="Trelleborg"
+								location="Trelleborg"
+								date="01 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling8.jpg"
+								tag="Ballet + Opera"
+								name="Fjordenhus"
+								location="Vejle"
+								date="02 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling9.jpg"
+								tag="Ballet + Opera"
+								name="Great Northern"
+								location="Kerteminde"
+								date="03 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling10.jpg"
+								tag="Ballet + Opera"
+								name="Christianssæde Slot"
+								location="Lolland"
+								date="04 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling11.jpg"
+								tag="Ballet + Opera"
+								name="Tisvildeleje"
+								location="Tisvildeleje"
+								date="05 Aug. 2026"
+							></Card>
+				
+							<Card
+								image="/images/performances/forestilling12.jpg"
+								tag="Ballet + Opera"
+								name="Rønnebæksholm"
+								location="Næstved"
+								date="06 Aug. 2026"
+							></Card>
+				
+						</div>
 					</div>
 				</div>
 			<!-- end carusel -->
