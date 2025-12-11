@@ -9,23 +9,13 @@ import Card from "../components/Card.astro";
 ---
 <MainLayout title="">
 
-<img src="/public/images/singleview/hero.jpg" alt="" class="hero-img">
+  <img 
+  src="/public/images/singleview/hero.jpg" 
+  alt="" 
+  class="block w-screen h-[110vh] object-cover relative left-1/2 -translate-x-1/2 rounded-none shadow-md"
+/>
 
-<style>
-  .hero-img {
-    display: block;
-    width: 100vw;
-    height: auto;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-    border-radius: 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-</style>
-
-<section class="rect-section">
+<section class="rect-section -mt-20">
     <div class="column space-y-3">
       <p>Ballet + Opera</p>
       <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">Solyst - Den Kgl. Skydebane</h1>
