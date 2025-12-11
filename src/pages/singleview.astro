@@ -18,8 +18,7 @@ import Card from "../components/Card.astro";
 <section class="rect-section -mt-20">
     <div class="column space-y-3">
       <p>Ballet + Opera</p>
-      <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">Solyst - Den Kgl. Skydebane</h1>
-      
+      <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">Solyst - Den Kgl. Skydebane</h1> 
     </div>
     <div class="column space-y-3">
         <div class="flex items-center gap-2">
@@ -40,7 +39,7 @@ import Card from "../components/Card.astro";
           </div>
     
     </div>
-    <div class="column space-y-3">
+    <div class="column space-y-3 align ml-30">
       <h3 class="font-body">Pris, ex. gebyr:</h3>
       <h2 class="font-bold text-2xl">445 - 765 kr.</h2>
       <Button size="regular">Køb Billet</Button>
@@ -56,7 +55,7 @@ import Card from "../components/Card.astro";
       padding: 2rem 3rem; /* Increased horizontal padding */
       margin-top: -2rem;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      max-width: 1000px; /* Increased max-width */
+      max-width: 1200px; /* Increased max-width */
       margin-left: auto;
       margin-right: auto;
       position: relative;
@@ -93,14 +92,14 @@ import Card from "../components/Card.astro";
     <div class="space-y-6 mb-30">
       <div class="mb-25">
         <h1 class="text-4xl md:text-5xl font-heading mb-10 font-bold text-[#173945]">Placering</h1>
-        <p class="font-body leading-relaxed text-[#173945]">
+        <p class="max-w-[65ch] font-body leading-relaxed text-[#173945]">
           Verdensballetten vender tilbage til det historiske Sølyst, Den Kongelige Skydebane nord for København — en unik aften med ballet, opera og klassisk musik i den fortryllende kulisse af parken og Øresund.
         </p>
       </div>
   
       <div>
         <h1 class="text-4xl md:text-5xl font-heading mb-10 font-bold text-[#173945]">Synopsis</h1>
-        <p class="font-body leading-relaxed text-[#173945]">
+        <p class="max-w-[65ch] font-body leading-relaxed text-[#173945]">
           I sommer præsenterer Verdensballetten primaballerinaer og solodansere fra nogle af verdens førende balletkompagnier, akkompagneret af internationalt anerkendte operasangere og klassiske musikere.
           Programmet byder på højdepunkter fra Tornerose, Giselle og Manon samt nye værker skabt specielt til Verdensballetten. Tenor og konferencier Jens-Christian Wandt guider aftenen med underholdende anekdoter.
           Med naturen som kulisse får publikum en unik balletoplevelse præget af stedets særlige ånd og med tilknytning til både Gentofte og Klampenborg.
@@ -109,7 +108,7 @@ import Card from "../components/Card.astro";
     </div>
   
     <!-- Right column: images -->
-    <div class="relative w-fit mb-30">
+    <div class="relative w-fit mb-30 scale-80">
 
         <img src="/public/images/singleview/info1.jpg"
              alt="Image 1"
@@ -128,6 +127,7 @@ import Card from "../components/Card.astro";
     <!-- Kunstner -->
   <section class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto mt-40">
     <h1 class="text-4xl md:text-5xl font-heading mb-20 font-bold text-[#173945]">Kunstnere</h1>
+
   <section class="kunstner  grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="grid grid-cols-2 gap-4 items-center">
         <div>
@@ -146,7 +146,9 @@ import Card from "../components/Card.astro";
         </div>
         <div>
         <h4 class="font-heading text-3xl font-semibold mb-5 text-[#173945]">Anna Rose O’Sullivan</h4>
-        <p class="font-body leading-relaxed text-[#173945]">Principaldanser ved The The Royal Ballet i London.</p>
+        <p class="font-body leading-relaxed text-[#173945]">Principaldanser</p>
+        <p class="font-body leading-relaxed text-[#173945]">The Royal Ballet</p>
+            <p class="font-body leading-relaxed text-[#173945]">i London.</p>
         </div>
     </div>
     <div class="grid grid-cols-2 gap-4 items-center">
