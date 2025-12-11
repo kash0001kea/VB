@@ -1,4 +1,6 @@
 ---
+import Link from "./Link.astro"
+import TextHeading from "./TextHeading.astro"
 ---
 
 <footer class="bg-[#173945] text-white py-8">
@@ -6,17 +8,28 @@
 
     <!-- Column 1: Logo & Address -->
     <div>
+<<<<<<< HEAD
       <img src="/public/images/footer/logo.svg" alt="Logo" class="w-[120px] mb-4" />
       <address class="not-italic">
         Bredgade 76A, 1. sal<br />
         Havehuset<br />
         1260 København K<br />
         Danmark
+=======
+      <img src="/public/images/logo-stroke.svg" alt="Logo" style="width:120px; margin-bottom:1rem;">
+      <address style="font-style:normal;">
+        Bredgade 76A, 1. sal<br>
+        Havehuset<br>
+        1260 København K<br>
+        Danmark <br>
+        CVR: 30517326
+>>>>>>> 2cf6dabfa77da902906b2b57dbcd1bc19ab03b89
       </address>
     </div>
 
     <!-- Column 2: Navigation Links -->
     <div>
+<<<<<<< HEAD
       <h4 class="font-semibold mb-2">Navigation</h4>
       <ul class="list-none p-0 space-y-1">
         <li><a href="Forestillinger" class="text-white hover:underline">Forestillinger</a></li>
@@ -24,16 +37,33 @@
         <li><a href="/services" class="text-white hover:underline">Nyheder</a></li>
         <li><a href="/contact" class="text-white hover:underline">Kontakt</a></li>
         <li><a href="/contact" class="text-white hover:underline">Merch</a></li>
+=======
+      <TextHeading htmlheading="h2" size="h4" stylingclasses="text-green4 font-bold opacity-50">Navigation</TextHeading>
+      <ul style="flex flex-col gap-">
+        <li><Link href="/forestillinger" variant="navlink">Forestillinger</Link></li>
+        <li><Link href="/about" variant="navlink" style="color:#fff;">Om os</Link></li>
+        <li><Link href="/services" variant="navlink" style="color:#fff;">Nyheder</Link></li>
+        <li><Link href="/contact" variant="navlink" style="color:#fff;">Kontakt</Link></li>
+        <li><Link href="/contact" variant="navlink" style="color:#fff;">Merch</Link></li>
+>>>>>>> 2cf6dabfa77da902906b2b57dbcd1bc19ab03b89
       </ul>
     </div>
 
     <!-- Column 3: Other Links -->
     <div>
+<<<<<<< HEAD
       <h4 class="font-semibold mb-2">Resources</h4>
       <ul class="list-none p-0 space-y-1">
         <li><a href="/blog" class="text-white hover:underline">Vejr- og returpolitik</a></li>
         <li><a href="/careers" class="text-white hover:underline">Partnerskaber</a></li>
         <li><a href="/faq" class="text-white hover:underline">Privatlivspolitik</a></li>
+=======
+      <TextHeading htmlheading="h2" size="h4" stylingclasses="text-green4 font-bold opacity-50">Ressourcer</TextHeading>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/blog" style="color:#fff;">Vejr- og returpolitik</a></li>
+        <li><a href="/careers" style="color:#fff;">Partnerskaber</a></li>
+        <li><a href="/faq" style="color:#fff;">Privatlivspolitik</a></li>
+>>>>>>> 2cf6dabfa77da902906b2b57dbcd1bc19ab03b89
       </ul>
     </div>
 
