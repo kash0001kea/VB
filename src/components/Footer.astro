@@ -5,7 +5,7 @@ import TextBody from "./TextBody.astro"
 ---
 
 <footer style="background:rgb(23, 57, 69); color:#fff; padding:2rem 0;">
-  <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start py-20">
+  <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start py-6">
     <!-- Column 1: Logo & Address -->
     <div>
       <img src="/public/images/logo-stroke.svg" alt="Logo" style="width:120px; margin-bottom:1rem;">
@@ -20,29 +20,29 @@ import TextBody from "./TextBody.astro"
 
     <!-- Column 2: Navigation Links -->
     <div>
-      <TextHeading htmlheading="h2" size="h4" stylingclasses="text-green4 font-bold opacity-50">Navigation</TextHeading>
-      <ul style="flex flex-col gap-">
+      <TextHeading htmlheading="h2" size="" stylingclasses="text-[24px] font-heading text-green4 font-bold opacity-50">Navigation</TextHeading>
+      <ul style="">
         <li><Link href="/forestillinger" variant="navlink">Forestillinger</Link></li>
-        <li><Link href="/about" variant="navlink" style="color:#fff;">Om os</Link></li>
-        <li><Link href="/services" variant="navlink" style="color:#fff;">Nyheder</Link></li>
-        <li><Link href="/contact" variant="navlink" style="color:#fff;">Kontakt</Link></li>
-        <li><Link href="/contact" variant="navlink" style="color:#fff;">Merch</Link></li>
+        <li><Link href="/services" variant="navlink" linkStyling="">Nyheder</Link></li>
+        <li><Link href="/about" variant="navlink" linkStyling="">Om os</Link></li>
+        <li><Link href="/contact" variant="navlink" linkStyling="">Kontakt</Link></li>
+        <li><Link href="/contact" variant="navlink" linkStyling="">Merch</Link></li>
       </ul>
     </div>
 
     <!-- Column 3: Other Links -->
     <div>
-      <TextHeading htmlheading="h2" size="h4" stylingclasses="text-green4 font-bold opacity-50">Ressourcer</TextHeading>
+      <TextHeading htmlheading="h2" size="" stylingclasses="text-[24px] font-heading text-green4 font-bold opacity-50">Ressourcer</TextHeading>
       <ul style="list-style:none; padding:0;">
-        <li><a href="/blog" style="color:#fff;">Vejr- og returpolitik</a></li>
-        <li><a href="/careers" style="color:#fff;">Partnerskaber</a></li>
-        <li><a href="/faq" style="color:#fff;">Privatlivspolitik</a></li>
+        <li><Link href="/blog" variant="navlink" style="color:#fff;">Vejr- og returpolitik</Link></li>
+        <li><Link href="/careers" variant="navlink"style="color:#fff;">Partnerskaber</Link></li>
+        <li><Link href="/faq" variant="navlink" style="color:#fff;">Privatlivspolitik</Link></li>
       </ul>
     </div>
-    
+
     <!-- Column 4: Social Media Icons -->
     <div>
-      <h4>Follow Us</h4>
+      <TextHeading htmlheading="h2" size="" stylingclasses="text-[24px] font-heading text-green4 font-bold opacity-50">Follow Us</TextHeading>
       <div style="display:flex; gap:1rem;">
         <a href="https://www.facebook.com/Verdensballetten/" target="_blank" rel="noopener" aria-label="Facebook">
           <img src="/public/images/footer/fb.svg" alt="">
