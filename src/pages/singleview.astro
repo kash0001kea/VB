@@ -15,66 +15,51 @@ import Card from "../components/Card.astro";
   class="block w-screen h-[80vh] object-cover relative left-1/2 -translate-x-1/2 rounded-none shadow-md -mb-40"
 />
 
-<section class="rect-section">
-    <div class="column space-y-3">
-      <p>Ballet + Opera</p>
-      <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">Solyst - Den Kgl. Skydebane</h1> 
-    </div>
-    <div class="column space-y-3">
-        <div class="flex items-center gap-2">
-            <img src="/public/images/singleview/location.svg" alt="">
-            <span class="font-body">Klampenborg</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <img src="/public/images/singleview/date.svg" alt="">
-            <span class="font-body">Onsdag 8. juli 2026</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <img src="/public/images/singleview/time.svg" alt="">
-            <span class="font-body">kl. 19.30</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <img src="/public/images/singleview/pause.svg" alt="">
-            <span class="font-body">2 t. inkl. pause</span>
-          </div>
-    
-    </div>
-    <div class="column space-y-3 align ml-30">
-      <h3 class="font-body">Pris, ex. gebyr:</h3>
-      <h2 class="font-bold text-2xl">445 - 765 kr.</h2>
-      <Button size="regular">Køb Billet</Button>
-    </div>
-  </section>
-  
-  <style>
-    .rect-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem; /* evenly spaced gap between columns */
-  background: #173945;
-  color: #fff;
-  padding: 2rem 3rem;
-  margin-top: -2rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 1;
-}
+<section
+  class="flex justify-between gap-8 bg-[#173945] text-white px-12 py-8 
+         max-w-[1200px] mx-auto -mt-8 shadow-lg relative z-10
+         max-[700px]:flex-col">
 
-.rect-section .column {
-  flex: 1; /* ensures equal width */
-  margin: 0; /* remove margin so widths match exactly */
-}
+  <!-- Column 1 -->
+  <div class="flex-1 space-y-3">
+    <p>Ballet + Opera</p>
+    <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">
+      Solyst - Den Kgl. Skydebane
+    </h1>
+  </div>
 
-@media (max-width: 700px) {
-  .rect-section {
-    flex-direction: column;
-  }
-}
+  <!-- Column 2 -->
+  <div class="flex-1 space-y-3">
+    <div class="flex items-center gap-2">
+      <img src="/public/images/singleview/location.svg" alt="">
+      <span class="font-body">Klampenborg</span>
+    </div>
 
-  </style>
+    <div class="flex items-center gap-2">
+      <img src="/public/images/singleview/date.svg" alt="">
+      <span class="font-body">Onsdag 8. juli 2026</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <img src="/public/images/singleview/time.svg" alt="">
+      <span class="font-body">kl. 19.30</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <img src="/public/images/singleview/pause.svg" alt="">
+      <span class="font-body">2 t. inkl. pause</span>
+    </div>
+  </div>
+
+  <!-- Column 3 -->
+  <div class="flex-1 space-y-3 ml-30">
+    <h3 class="font-body">Pris, ex. gebyr:</h3>
+    <h2 class="font-bold text-2xl">445 - 765 kr.</h2>
+    <Button size="regular">Køb Billet</Button>
+  </div>
+
+</section>
+
 
 <section class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
 <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-30">
