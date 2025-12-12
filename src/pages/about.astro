@@ -11,8 +11,7 @@ import TextBody from '../components/TextBody.astro';
     <!-- Heading starts here -->
     <section class="mt-30 lg:mt-30"> 
         <div class="mx-auto mb-6 text-center">
-                <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="">Sæsong 2026</TextHeading> -->
-                <TextHeading htmlheading="h2" size="h2" stylingclasses="font-heading mb-6 font-bold">Om VerdensBalletten</TextHeading>
+                <TextHeading htmlheading="h1" size="h2" stylingclasses="font-heading mb-6 font-bold">Om VerdensBalletten</TextHeading>
             </div>
         <div class="border-brown3 border-1"></div>
     </section>
@@ -70,13 +69,12 @@ import TextBody from '../components/TextBody.astro';
                 autoplay 
                 muted 
                 loop 
-                id="videoDesktop"
-            ></video>
+                id="videoDesktop">
+            </video>
             <img class="lg:max-w-[738px] my-auto parallaxelementUp opacity-0 translate-y-8 transition-all duration-1000 ease-out"
                 src="/images/about/img1.jpg" 
                 alt=""
-                id="imageDesktop"
-            >
+                id="imageDesktop">
         </div>
         
     </section>
@@ -121,6 +119,7 @@ import TextBody from '../components/TextBody.astro';
     <!-- end text section 2 -->
 
     <!-- start image section 2 -->
+    <!-- desktop -->
     <section class="hidden lg:inline mb-30 lg:mb-80" id="images2-1">
         <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 -mt-15 lg:-mt-30 relative">
             <img class="lg:max-w-[512px] my-auto -scale-x-100 parallaxelement3" 
@@ -129,6 +128,7 @@ import TextBody from '../components/TextBody.astro';
                 src="/images/about/img3.jpg" alt="">
         </div>
     </section>
+    <!-- mobile -->
     <section class="lg:hidden mt-15">
         <div class="">
             <img class="my-auto mb-4" 
@@ -138,7 +138,7 @@ import TextBody from '../components/TextBody.astro';
         </div>
     </section>
     <!-- end image section 2 -->
-
+    
     <!-- start section 3 -->
     <section class="mt-15 lg:mt-30 lg:mb-40" id="images3">
         <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Verdensstjerner tæt på dig</TextHeading>
@@ -261,7 +261,6 @@ import TextBody from '../components/TextBody.astro';
     <section class="my-15 lg:my-30" id="podcast">
         <div class="grid lg:grid-cols-2 gap-6 lg:gap-20 my-12 ">
             <div class="">
-                <!-- <TextHeading htmlheading="h1" size="eyebrow" stylingclasses="mb-5">Oplev Verdensballetten året rundt</TextHeading> -->
                 <TextHeading htmlheading="h2" size="omh4" stylingclasses="font-heading mb-0 lg:mb-6 font-bold">
                     Kom Med Bag Kulisserne <br> På Verdensballetten
                 </TextHeading>
