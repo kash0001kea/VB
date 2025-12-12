@@ -16,12 +16,12 @@ import Card from "../components/Card.astro";
 />
 
 <section
-  class="flex justify-between gap-8 bg-[#173945] text-white px-12 py-8 
+  class="flex justify-between gap-8 bg-[#173945] text-white px-12 py-8
          max-w-[1200px] mx-auto -mt-8 shadow-lg relative z-10
          max-[700px]:flex-col">
 
   <!-- Column 1 -->
-  <div class="flex-1 space-y-3">
+  <div class="flex-1 space-y-3 lg:max-w-[348px]">
     <p>Ballet + Opera</p>
     <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">
       Solyst - Den Kgl. Skydebane
@@ -29,7 +29,7 @@ import Card from "../components/Card.astro";
   </div>
 
   <!-- Column 2 -->
-  <div class="flex-1 space-y-3">
+  <div class="flex-1 space-y-3 lg:max-w-[200px] lg:ml-auto lg:my-auto">
     <div class="flex items-center gap-2">
       <img src="/public/images/singleview/location.svg" alt="">
       <span class="font-body">Klampenborg</span>
@@ -52,7 +52,7 @@ import Card from "../components/Card.astro";
   </div>
 
   <!-- Column 3 -->
-  <div class="flex-1 space-y-3 ml-30">
+  <div class="flex-1 space-y-3 lg:max-w-[208px] lg:ml-30 lg:my-auto">
     <h3 class="font-body">Pris, ex. gebyr:</h3>
     <h2 class="font-bold text-2xl">445 - 765 kr.</h2>
     <Button size="regular">Køb Billet</Button>
