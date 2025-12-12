@@ -16,7 +16,7 @@ import Button from "./Button.astro";
     "
     x-cloak
     :class="showOnScroll ? 'translate-y-0' : '-translate-y-full'"
-    class="bg-green1 p-4 fixed w-full z-20 top-0 transition-transform duration-300">
+    class="bg-green1 p-4 fixed w-full z-100 top-0 transition-transform duration-300">
 
 
     <div id="navbar" class="flex flex-row justify-between max-w-[1200px] mx-auto">
@@ -39,7 +39,8 @@ import Button from "./Button.astro";
         <!-- Mobile Burger Menu -->
         <button id="burgermenu" class="lg:hidden text-2xl font-bold text-white uppercase" 
                 x-on:click="showmenu = !showmenu">
-            Menu
+            <span x-show="!showmenu" class="text-4xl">☰</span>
+            <span x-show="showmenu">✕</span>
         </button>
     </div>
 

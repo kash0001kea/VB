@@ -48,9 +48,10 @@ import TextBody from '../components/TextBody.astro';
                  præget af hver lokations særlige sjæl og karakter.
                </TextBody>
         </div>
-        <div class="lg:hidden flex flex-col gap-8">
+        <!-- mobile -->
+        <div class="lg:hidden flex flex-col gap-4 mb-25">
             <video class="lg:h-[630px] opacity-0 transition-opacity duration-1000 ease-in-out"
-                src="/images/about/05_Drone Locations VERTICAL.mp4"
+                src="/images/about/05_drone_locations_vertical.mp4"
                 autoplay 
                 muted 
                 loop 
@@ -62,10 +63,10 @@ import TextBody from '../components/TextBody.astro';
                 id="imageMobile"
             >
         </div>
-        
+        <!-- desktop -->
         <div class="mt-15 hidden lg:flex gap-12 lg:gap-20 parallaxelementDown">
             <video class="lg:h-[630px] opacity-0 transition-opacity duration-1000 ease-in-out"
-                src="/images/about/05_Drone Locations VERTICAL.mp4"
+                src="/images/about/05_drone_locations_vertical.mp4"
                 autoplay 
                 muted 
                 loop 
@@ -189,7 +190,7 @@ import TextBody from '../components/TextBody.astro';
                    </TextBody>
                </div>
                <video class="lg:max-h-[630px] lg:ml-auto " id="video2"
-                src="/images/about/03_Backstage Ballerina VERTICAL.mp4"
+                src="/images/about/03_backstage_ballerina_vertical.mp4"
                 autoplay 
 				muted 
 				loop 
@@ -201,6 +202,14 @@ import TextBody from '../components/TextBody.astro';
     <!-- start section 4 -->
     <section class="mt-15 lg:mt-30 mb-15 lg:mb-60" id="images4">
         <div class="lg:flex gap-12 lg:gap-20 justify-between">
+            <!-- mobile -->
+            <div class="lg:hidden mt-15">
+                <img class="my-auto mb-4" 
+                    src="/images/about/img4.jpg" alt="">
+                <img class="mb-15 w-full" 
+                    src="/images/about/img5.jpg" alt="">
+            </div>
+            <!-- desktop -->
             <div class="scale-50 lg:scale-100 lg:flex gap-12 lg:gap-20 relative hidden">
                 <img class="lg:max-w-[400px] absolute lg:top-20 lg:left-40 my-auto parallaxelement5" 
                     src="/images/about/img4.jpg" alt="">
