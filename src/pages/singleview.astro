@@ -12,10 +12,10 @@ import Card from "../components/Card.astro";
   <img 
   src="/public/images/singleview/hero.jpg" 
   alt="" 
-  class="block w-screen h-[70vh] object-cover relative left-1/2 -translate-x-1/2 rounded-none shadow-md"
+  class="block w-screen h-[80vh] object-cover relative left-1/2 -translate-x-1/2 rounded-none shadow-md -mb-40"
 />
 
-<section class="rect-section -mt-20">
+<section class="rect-section">
     <div class="column space-y-3">
       <p>Ballet + Opera</p>
       <h1 class="text-4xl md:text-5xl font-heading font-bold leading-snug">Solyst - Den Kgl. Skydebane</h1> 
@@ -48,41 +48,32 @@ import Card from "../components/Card.astro";
   
   <style>
     .rect-section {
-      display: flex;
-      justify-content: space-between;
-      background: #173945;
-      color: #fff;
-      padding: 2rem 3rem; /* Increased horizontal padding */
-      margin-top: -2rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      max-width: 1200px; /* Increased max-width */
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      z-index: 1;
-    }
-    .rect-section .column {
-      flex: 1;
-      margin: 0 1rem;
-    }
-    .rect-section .column h3 {
-      margin-top: 0;
-    }
-    @media (max-width: 1300px) {
-      .rect-section {
-        max-width: 95vw;
-        padding: 1rem;
-      }
-    }
-    @media (max-width: 700px) {
-      .rect-section {
-        flex-direction: column;
-        padding: 1rem;
-      }
-      .rect-section .column {
-        margin: 1rem 0;
-      }
-    }
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* evenly spaced gap between columns */
+  background: #173945;
+  color: #fff;
+  padding: 2rem 3rem;
+  margin-top: -2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.rect-section .column {
+  flex: 1; /* ensures equal width */
+  margin: 0; /* remove margin so widths match exactly */
+}
+
+@media (max-width: 700px) {
+  .rect-section {
+    flex-direction: column;
+  }
+}
+
   </style>
 
 <section class="max-w-[360px] lg:max-w-[1200px] justify-center mx-auto">
