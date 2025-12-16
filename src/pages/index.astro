@@ -87,7 +87,7 @@ import Newsbutton from "../components/Newsbutton.astro";
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-brown1 hover:text-white" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
 					</button>
 				
-
+					<!-- start horizontal scroll section -->
 					<div class=" overflow-x-auto ">
 						<div class="flex flex-row gap-12 lg:gap-20">
 							<a href="/singleview">
@@ -345,12 +345,7 @@ import Newsbutton from "../components/Newsbutton.astro";
 
 
 	</article>
-	<!-- <article>
-		<h1>VB</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article> -->
+
 </MainLayout>
 
 <script>
@@ -364,12 +359,12 @@ import Newsbutton from "../components/Newsbutton.astro";
 	animate( ".fotoinview", { y: [200, 0 ], opacity:[0,1] }, { duration: 1 })
 	})
 
-	/* Parallax med tekstboks */ 
+	/* Parallax */ 
 	scroll(animate(".parallaxelementUp", { y: [-20, 40] }), {
 		target: document.querySelector(".parallaxelementUp"),
 	});
 
-    /* Parallax med tekstboks */ 
+    /* Parallax */ 
 	scroll(animate(".parallaxelementDown", { y: [20, -40] }), {
 		target: document.querySelector(".parallaxelementDown"),
 	});
