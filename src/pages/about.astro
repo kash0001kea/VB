@@ -49,14 +49,14 @@ import TextBody from '../components/TextBody.astro';
         </div>
         <!-- mobile -->
         <div class="lg:hidden flex flex-col gap-4 mb-25">
-            <video class="lg:h-[630px] opacity-0 transition-opacity duration-1000 ease-in-out"
+            <video class="lg:h-[630px]"
                 src="/images/about/05_drone_locations_vertical.mp4"
                 autoplay 
                 muted 
                 loop 
                 id="videoMobile"
             ></video>
-            <img class="lg:max-w-[738px] my-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+            <img class="lg:max-w-[738px] my-auto"
                 src="/images/about/img1.jpg" 
                 alt=""
                 id="imageMobile"
@@ -64,7 +64,7 @@ import TextBody from '../components/TextBody.astro';
         </div>
         <!-- desktop -->
         <div class="mt-15 hidden lg:flex gap-12 lg:gap-20 parallaxelementDown">
-            <video class="lg:h-[630px] opacity transition-opacity duration-1000 ease-in-out"
+            <video class="lg:h-[630px]"
                 src="/images/about/05_drone_locations_vertical.mp4"
                 autoplay 
                 muted 
@@ -358,31 +358,7 @@ import TextBody from '../components/TextBody.astro';
 	animate("#podcast", { y: [200, 0 ], opacity:[0,1] }, { duration: 1, delay: 0.3 })
 	})
 
-    document.addEventListener('DOMContentLoaded', () => {
-    const videos = document.querySelectorAll('video');
-    const images = document.querySelectorAll('img');
-
-    // Fade in videos with a slight delay
-    videos.forEach(video => {
-        setTimeout(() => {
-            video.classList.add('opacity-100');
-        }, 900); // small delay to make fade visible
-    });
-
-    // Observe images and fade them in after a delay
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                }, 600); // 1.5s delay after entering viewport
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    images.forEach(img => observer.observe(img));
-});
+    
 
 
 </script>
